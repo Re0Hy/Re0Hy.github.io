@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="c语言基础函数函数定义12345678910111213返回类型 函数名(参数列表)&amp;#123;		return;&amp;#125;eg.int plus(int x,int y)&amp;#123;		return x+y;&amp;#125;int用来表明宽度是多大int 	&#x3D;&#x3D;&gt;		4个字节short   &#x3D;&#x3D;&gt;     2个字节char    &#x3D;&#x3D;&gt;     1个字节  函数对应汇编代码  1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/09/06/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="c语言基础函数函数定义12345678910111213返回类型 函数名(参数列表)&amp;#123;		return;&amp;#125;eg.int plus(int x,int y)&amp;#123;		return x+y;&amp;#125;int用来表明宽度是多大int 	&#x3D;&#x3D;&gt;		4个字节short   &#x3D;&#x3D;&gt;     2个字节char    &#x3D;&#x3D;&gt;     1个字节  函数对应汇编代码  1">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523131842634.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523142503173.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602145440107.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523171314026.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523173539702.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531171540786.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531172401059.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531181004871.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531184605155.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531190625214.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531190900308.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531202341337.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531203429969.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601143807291.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602125825245.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602130145462.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601171447171.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601234550837.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601235617786.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602184024368.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602181309541.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602181421987.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602175950034.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602190054548.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602191213172.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601134216931.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601134319394.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601134403004.png">
+<meta property="og:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601134754180.png">
+<meta property="article:published_time" content="2021-09-06T05:28:53.355Z">
+<meta property="article:modified_time" content="2021-09-06T05:29:02.241Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523131842634.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C语言基础" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/09/06/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2021-09-06T05:28:53.355Z" itemprop="datePublished">2021-09-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="c语言基础"><a href="#c语言基础" class="headerlink" title="c语言基础"></a>c语言基础</h1><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">返回类型 函数名(参数列表)</span><br><span class="line">&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">eg.</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">plus</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> x+y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span>用来表明宽度是多大</span><br><span class="line"><span class="keyword">int</span> 	==&gt;		<span class="number">4</span>个字节</span><br><span class="line"><span class="keyword">short</span>   ==&gt;     <span class="number">2</span>个字节</span><br><span class="line"><span class="keyword">char</span>    ==&gt;     <span class="number">1</span>个字节</span><br></pre></td></tr></table></figure>
+
+<p>函数对应汇编代码</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523131842634.png" alt="image-20210523131842634"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">401010  55					push		ebp</span><br><span class="line">401011  8B EC				mov         ebp,esp</span><br><span class="line">401013	83 EC 40			sub			esp,40h</span><br><span class="line">401016	53					push		ebx</span><br><span class="line">401017	56					push		esi</span><br><span class="line">401018	57					push		edi</span><br><span class="line">401019	8D 70 C0			lea			edi,[ebp-40h]</span><br><span class="line">40101C	B9 10 00 00 00		mov			ecx,10h</span><br><span class="line">401021	B8 CC CC CC CC		mov			eax,occcccccch</span><br><span class="line">401026	F3 AB				rep stos	dword ptr [edi]</span><br><span class="line">3:		 return	0;</span><br><span class="line">401028	33 C0				xor			eax,eax</span><br><span class="line">4:	&#125;</span><br><span class="line">40102A  5F					pop			edi</span><br><span class="line">40102B	5E					pop			esi</span><br><span class="line">40102C	5B					pop			ebx</span><br><span class="line">40102D	8B E5				mov			esp,ebp</span><br><span class="line">40102F	5D					pop			ebp</span><br><span class="line">401030  C3					ret</span><br></pre></td></tr></table></figure>
+
+
+
+<p>堆栈图</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523142503173.png" alt="image-20210523142503173"></p>
+<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><p><strong>C语言中参数传递:堆栈传参  从右到左</strong></p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p><strong>C语言中,返回值存储在EAX中</strong></p>
+<h3 id="调用约定"><a href="#调用约定" class="headerlink" title="调用约定"></a>调用约定</h3><p><strong>就是告诉编译器:怎么传递参数,怎么传递返回值,怎么平衡堆栈</strong></p>
+<p>常见的几种调用约定:</p>
+<table>
+<thead>
+<tr>
+<th>调用约定</th>
+<th>参数压栈顺序</th>
+<th>平衡堆栈</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>_cdecl</strong></td>
+<td><strong>从右至左入栈</strong></td>
+<td><strong>调用者清理栈</strong></td>
+</tr>
+<tr>
+<td><strong>_stdcall</strong></td>
+<td><strong>从右至左入栈</strong></td>
+<td><strong>自身清理堆栈</strong></td>
+</tr>
+<tr>
+<td><strong>_fastcall</strong></td>
+<td><strong>ECX/EDX传送前两个,剩下:从右至左入栈</strong></td>
+<td><strong>自身清理堆栈</strong></td>
+</tr>
+</tbody></table>
+<p><strong>平时写代码默认:<code>_cdecl</code></strong></p>
+<p><strong>调用<code>API</code>的时候,一般是<code>_stdcall</code></strong></p>
+<p><strong>一般不用<code>_fastcall</code></strong></p>
+<p><strong><code>_fastcall</code>好处:</strong></p>
+<p>​    <strong>执行效率对前两者要更高,参数超过两个的时候就不是很明显</strong></p>
+<p><strong>原因:从<code>CPU</code>读取数据比从内存中读取数据要快</strong></p>
+<h3 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h3><p><strong>通常用来使用别人写好的函数</strong></p>
+<p>个人理解:</p>
+<p>​    就是通过指针来指向函数起始地址,然后通过指针来实现函数功能,而不用再去调用原函数的代码</p>
+<p><strong>函数指针变量定义的格式:</strong></p>
+<p>​    *<em>返回类型 (调用约定 <em>变量名)(参数列表);</em></em></p>
+<p>注:<strong>调用约定可以省略,如果省略,会默认使用编译器的调用约定</strong></p>
+<p>eg.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> (_cdecl *pFun)(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>函数指针不能进行正常的指针操作</strong></p>
+<p>原因:<strong>函数指针去掉一个*后,你不能确定函数大小</strong></p>
+<p><strong>运用:</strong></p>
+<p>示例:<strong>通过函数指针绕过断点</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&lt;1&gt;函数指针变量的定义</span></span><br><span class="line"><span class="keyword">int</span> (_stdcall *pFun)(<span class="keyword">int</span>,<span class="keyword">int</span>,<span class="keyword">int</span>,<span class="keyword">int</span>,<span class="keyword">int</span>);<span class="comment">//返回值类型,int个数取决于原函数</span></span><br><span class="line"><span class="comment">//&lt;2&gt;正常调用</span></span><br><span class="line">MessageBox(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line"><span class="comment">//&lt;3&gt;通过函数指针  绕过断点</span></span><br><span class="line">pFun = (<span class="keyword">int</span> (_stdcall *pFun)(<span class="keyword">int</span>,<span class="keyword">int</span>,<span class="keyword">int</span>,<span class="keyword">int</span>,<span class="keyword">int</span>))<span class="number">0x77D5055C</span>;<span class="comment">//这里用的是内存地址,如果需要写在任意机器上都能运行的代码,需要使用硬编码</span></span><br><span class="line">pFun(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>实例:</p>
+<p>1.在<code>OD</code>中通过<code>BP MessageBox</code> 设置断点,运行到断点处,如下</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602145440107.png" alt="image-20210602145440107"></p>
+<p>2.确定参数个数(这里为5),确定平栈方式(这里是内平栈,故选用<code>_stdcall</code>)</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a><strong>全局变量</strong></h3><p><strong>写在函数外面的变量,它的内存地址不会改变</strong></p>
+<p><strong>eg.游戏外挂中查找的”基址”</strong></p>
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a><strong>局部变量</strong></h3><p><strong>函数内部申请,函数一旦执行完,其内存空间就会消失,其内存地址无法确定,初始必须赋值</strong></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523171314026.png" alt="image-20210523171314026"></p>
+<h2 id="变量与参数的内存布局"><a href="#变量与参数的内存布局" class="headerlink" title="变量与参数的内存布局"></a>变量与参数的内存布局</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//示例代码</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">plus</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> z = x+y;</span><br><span class="line">	<span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> r;</span><br><span class="line">    r = plus(<span class="number">1</span>,<span class="number">2</span>); ==&gt;  mov   dword ptr [ebp<span class="number">-4</span>],eax</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数带内存中的位置:</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210523173539702.png"></p>
+<h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531171540786.png" alt="image-20210531171540786"></p>
+<h3 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h3><h4 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>	<span class="number">8b</span>it	<span class="number">1</span>字节 	<span class="number">0</span>~<span class="number">0xFF</span></span><br><span class="line"><span class="keyword">short</span>	<span class="number">16b</span>it	<span class="number">2</span>字节		<span class="number">0</span>~<span class="number">0xFFFF</span></span><br><span class="line"><span class="keyword">int</span>		<span class="number">32b</span>it	<span class="number">4</span>字节		<span class="number">0</span>~<span class="number">0xFFFFFFFF</span></span><br><span class="line"><span class="keyword">long</span>	<span class="number">32b</span>it	<span class="number">4</span>字节		<span class="number">0</span>~<span class="number">0xFFFFFFFF</span></span><br><span class="line"><span class="comment">//int在16计算机中与short宽度一样 在32以上的计算机与long同</span></span><br></pre></td></tr></table></figure>
+
+<p>底层存储的形式均是以<strong>补码</strong>的形式存储</p>
+<p>//见<code>汇编.md</code>或<code>java.md</code></p>
+<h5 id="数据溢出"><a href="#数据溢出" class="headerlink" title="数据溢出"></a>数据溢出</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> x =<span class="number">0xFF</span>;	==&gt;<span class="number">1111</span> <span class="number">1111</span></span><br><span class="line"><span class="keyword">char</span> y =<span class="number">0x100</span>;  ==&gt;<span class="number">0001</span> <span class="number">0000</span> <span class="number">0000</span></span><br><span class="line"><span class="comment">//溢出时,会丢弃高位,保存低位</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h5 id="有符号与无符号数"><a href="#有符号与无符号数" class="headerlink" title="有符号与无符号数"></a>有符号与无符号数</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">signed</span>   <span class="keyword">unsigned</span></span><br></pre></td></tr></table></figure>
+
+<p>什么时候使用有符号数</p>
+<p>​        <strong>看是否需要存储负数</strong></p>
+<p><strong>在实际底层存储的时候,二者是没有任何区别的,它们的区别是根据人来认定的:</strong></p>
+<p>​        <strong>在扩展和判定的时候有区别</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span>int main()&#123;	signed char x = -1;	<span class="comment">//0xFF 1111 1111	int y = x;			//1111 1111 1111 1111 1111 1111 1111 1111    unsigned char x1 = -1;	//0xFF 1111 1111    int y1 = x1;			//0000 0000 0000 0000 0000 0000 1111 1111&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> 		<span class="number">4</span>字节<span class="keyword">double</span>		<span class="number">8</span>字节<span class="keyword">long</span> <span class="keyword">double</span>	<span class="number">8</span>字节(某些平台的编译器 可能是<span class="number">16</span>字节)</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> x = <span class="number">1.23</span>;<span class="keyword">double</span> d = <span class="number">2.34</span>;<span class="keyword">long</span> <span class="keyword">double</span> d = <span class="number">2.34</span>;<span class="comment">//推荐写法float x = 1.23F;double d = 2.34;long double d = 2.34L;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h5 id="存储方式"><a href="#存储方式" class="headerlink" title="存储方式"></a>存储方式</h5><p>前置知识:<strong>十进制整数与小数转换成二进制</strong>,<strong>科学记数法</strong></p>
+<p><strong>科学记数法</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> = <span class="number">1</span>* <span class="number">10</span>一次方		<span class="number">1100</span> = <span class="number">1</span>* <span class="number">10</span>二次方		<span class="number">21000</span> = <span class="number">1</span>* <span class="number">10</span>三次方		<span class="number">3</span><span class="comment">//后面1,2,3称为指数</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>十进制整数转换成二进制:</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//8为例     8 ==&gt; 10008/2 = 4.......0			^4/2 = 2.......0			|2/2 = 1.......0		  	|1/2 = 0.......1      	|//9为例     9 ==&gt; 10019/2 = 4.......1			^4/2 = 2.......0			|2/2 = 1.......0		  	|1/2 = 0.......1      	|</span></span><br></pre></td></tr></table></figure>
+
+<p>总结:<strong>所有的整数一定可以完整转换成二进制.</strong></p>
+<p><strong>十进制小数转换成二进制:</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//0.25为例     0.25 ==&gt; .010.25*2 = 0.5  ==&gt; (int)0.5 = 0   | 	0.5-0 = 0.50.5*2  = 1.0  ==&gt; (int)1.0 = 1   v  1.0-1 = 0.0//0.4为例      0.4 ==&gt;.01100110....0.4*2 = 0.8   ==&gt; (int)0.8 = 0   | 	0.8-0 = 0.8 0.8*2 = 1.6   ==&gt; (int)1.6 = 1   | 	1.6-1 = 0.60.6*2 = 1.2   ==&gt; (int)1.2 = 1   |	1.2-1 = 0.20.2*2 = 0.4   ==&gt; (int)0.4 = 0   |	0.4-0 = 0.4.......							 v  </span></span><br></pre></td></tr></table></figure>
+
+<p>总结:<strong>用二进制描述小数,不可能做到完全精确.</strong></p>
+<p>​        <strong>就好比用十进制表示1/3也不能完全表示.</strong></p>
+<p><code>float</code>与<code>double</code>在存储方式上都遵从<code>IEEE</code>编码规范</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531172401059.png" alt="image-20210531172401059"></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531181004871.png" alt="image-20210531181004871"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">00000000</span> <span class="number">00000000000000000000000</span><span class="comment">//表明数的正负(+:0,-:1)      //指数部分第一个位置表明小数点是向哪边位移的(左移:1,右移:0)   //左移: n-1 ==&gt;二进制,补足7位   //右移: n   ==&gt;二进制,补足7位,取反    	   //尾数部分存储 . 后面的值,顺序不变</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//以8.25存储到float中为例   8.25 ==&gt; 1000.01//首先1000.01 ==&gt; 1.00001 * 10^3 ==&gt;指数为33-1 = 2 ==&gt;  000 0010(2)//最终存储形式:0 10000010 00001000000000000000000//十六进制0100 0001 0000 0100 0000 0000 0000 0000==&gt; 41040000</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h5 id="精度"><a href="#精度" class="headerlink" title="精度"></a>精度</h5><p><code>float</code>和<code>double</code>的精度是由<strong>尾数的位数</strong>决定的:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span>	<span class="number">2</span>^<span class="number">23</span> = <span class="number">8388608</span>				<span class="comment">//一共7位,意味着最多能有7位有效数字double	2^52 = 4503599627370496		//一共16位,意味着最多能有16位有效数字</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="字符与字符串"><a href="#字符与字符串" class="headerlink" title="字符与字符串"></a>字符与字符串</h4><p><code>ASCLL</code>表  ==&gt; 美国标志信息交换代码表</p>
+<p><strong>字符串 = 字符拼接+结束标志符</strong></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531184605155.png" alt="image-20210531184605155"></p>
+<h5 id="中文字符"><a href="#中文字符" class="headerlink" title="中文字符"></a>中文字符</h5><p><strong>拓展<code>ASCLL</code>表</strong></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531190625214.png" alt="image-20210531190625214"></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531190900308.png" alt="image-20210531190900308"></p>
+<p>每个字节范围:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">128&lt;  &lt;255</span><br></pre></td></tr></table></figure>
+
+
+
+<p>弊端:</p>
+<p>​    <strong>1.两种编码可能使用相同的数字代表两个不同的符号</strong></p>
+<p>​    <strong>2.或者同一个符号用不同数字代表</strong></p>
+<p><strong>补:<code>Unicode</code>编码就是为了解决这个问题才出现的</strong></p>
+<h2 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h2><p>运算符</p>
+<p>算术运算符</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+  -  * /  %   ++   --<span class="comment">//加 减 乘 除 求余 自加 自减</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>++,--</code></p>
+<p><strong>放前面:先自加,再运算</strong></p>
+<p><strong>放后面:先运算,再自加</strong></p>
+<p>表达式</p>
+<p>无论多么复杂的表达式,最终都会有一个结果</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>--&gt;<span class="keyword">short</span>--&gt;<span class="keyword">int</span>--&gt;<span class="keyword">float</span>--&gt;<span class="keyword">double</span><span class="comment">//当char short 参与表达式时,都会变成int型</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h2><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>略</p>
+<h3 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)&#123;	<span class="keyword">case</span> 常量表达式<span class="number">1</span>:		语句;		<span class="keyword">break</span>;	<span class="keyword">case</span> 常量表达式<span class="number">2</span>:		语句;		<span class="keyword">break</span>;	...	<span class="keyword">default</span>:		语句;		<span class="keyword">break</span>;&#125;<span class="comment">//表达式结果不能是浮点数//case后的值不能一样//case后的值必须是常量//进入case后,如果没有break,后续case不再判断,直接运行,直到遇到break或者运行完//default如果放在中间,就需要在其后写break</span></span><br></pre></td></tr></table></figure>
+
+<p>eg.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span>int main()&#123;	int x =1;	switch(x)&#123;		case 0:			printf(<span class="meta-string">&quot;-------1\n&quot;</span>);		default:			printf(<span class="meta-string">&quot;default\n&quot;</span>);			case 2:			printf(<span class="meta-string">&quot;-------2\n&quot;</span>);		case 3:			printf(<span class="meta-string">&quot;-------3\n&quot;</span>);			break;		case 4:			printf(<span class="meta-string">&quot;-------1\n&quot;</span>);	&#125;	printf(<span class="meta-string">&quot;结束!&quot;</span>);&#125; </span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531202341337.png" alt="image-20210531202341337"></p>
+<p>选择<code>switch</code>语句,是因为执行效率远远高于<code>if</code>语句</p>
+<h4 id="switch为什么高效"><a href="#switch为什么高效" class="headerlink" title="switch为什么高效?"></a>switch为什么高效?</h4><p><strong>如果条件少的时候,<code>if</code>语句与<code>switch</code>语句汇编层面差别不大</strong><br><strong>但是如果条件多的时候,<code>switch</code>语句汇编会发生变化</strong></p>
+<p><strong>形成一个表,存储分支对应的地址</strong></p>
+<p>示例:</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210531203429969.png" alt="image-20210531203429969"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov  eax,dword ptr [ebp+8]mov  dword ptr [ebp-4],eaxmov  ecx,dword ptr [ebp-4]sub  ecx,1				//减的值是switch中最小的值mov	 dword ptr [ebp-4],ecxcmp  dword ptr [ebp-4],3ja   $L42253+0FH(00401091)mov  edx,dword ptr [ebp-4]jmp  dword ptr [edx*4+4010AFH]</span><br></pre></td></tr></table></figure>
+
+<p>补:<strong>switch乱序不会影响汇编层面的算法</strong></p>
+<p>​    <strong>如果case的值不连续,则中间的地址均填default的地址值</strong></p>
+<p>自己测试:</p>
+<p>1.在10项中连续抹去,不要抹去最大值与最小值</p>
+<p>2.将连续的10项抹去1项或者2项,观察反汇编有无变化</p>
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据类型 变量名[常量]</span></span><br></pre></td></tr></table></figure>
+
+<p>使用常量的原因:</p>
+<p>​    <strong>程序构建的时候,需要明确表明你需要多大的堆栈空间,无法确定就无法形成汇编代码,从而无法运行<code>.exe</code></strong></p>
+<p>内存分配:</p>
+<p><strong>分配空间是本机宽度的整数倍</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> age[<span class="number">10</span>];<span class="comment">//会分配12字节,原因是10字节不能被4整除(用空间换时间)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>补:</p>
+<p>​    本机宽度:能让机器运行效率最高的字节数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//16位   2字节//32位	4字节//64位   8字节</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601143807291.png" alt="image-20210601143807291"></p>
+<p><strong>实际内存存储的时候都是连续存储的,没有本质区别,二维数组是为了方便编译者</strong></p>
+<p>读写:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> arr[<span class="number">5</span>][<span class="number">12</span>]<span class="comment">//查询数据arr[0][8] ==&gt; arr[0*12+8]arr[1][7] ==&gt; arr[1*12+8]</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="数组参数的传递"><a href="#数组参数的传递" class="headerlink" title="数组参数的传递"></a>数组参数的传递</h3><p>​    <strong>1.数组作为参数时,传递的是数组的首地址</strong></p>
+<p>​    <strong>2.数组作为参数时,应该传递数组的长度</strong></p>
+<p>一维数组作为参数传递的时候,可以与指针对应,任意变换</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">5</span>]=&#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;e&#x27;</span>&#125;;	<span class="comment">//&#x27;\0&#x27;或者0char str[]=&quot;abcde&quot;;					//编译器末尾填0char* str=&quot;abcde&quot;;					//常量区</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="指针数组与数组指针"><a href="#指针数组与数组指针" class="headerlink" title="指针数组与数组指针"></a>指针数组与数组指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* a = <span class="string">&quot;Hello&quot;</span>;<span class="keyword">char</span>* b = <span class="string">&quot;assembly&quot;</span>;<span class="comment">//1char* arr[2] = &#123;a,b&#125;;//2char* arr[2];arr[0] = a;arr[1] = b;//3char* arr[2] = &#123;	&quot;Hello&quot;;	&quot;assembly&quot;;&#125;;//内存存储的时候,都是一样的,存储的不是值,是值对应的地址</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>结构体指针数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span>&#123;</span>	<span class="keyword">int</span> x;	<span class="keyword">int</span> y;&#125;;Point p;			<span class="comment">//8字节Point arr[10];		//8*10字节Point* arr[10];		//4*10字节</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="数组指针"><a href="#数组指针" class="headerlink" title="数组指针"></a>数组指针</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;	<span class="keyword">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>&#125;;	<span class="keyword">int</span>* x = arr;			<span class="comment">//int*	int*y = (int*)&amp;arr;		//int(*)[10]  数组指针&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>数组指针的定义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>(*px)[<span class="number">5</span>];		<span class="comment">//一维数组指针char(*px)[3];int(*px)[2][2];		//二维数组指针char(*px)[3][3][3];	//三维数组指针</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p[<span class="number">5</span>]  !=  <span class="keyword">int</span>(*p)[<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>指针数组的赋值</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>(*px1)[<span class="number">5</span>];<span class="keyword">char</span>(*px2)[<span class="number">3</span>];<span class="keyword">int</span>(*px3)[<span class="number">2</span>][<span class="number">2</span>];px1 = (<span class="keyword">int</span> (*)[<span class="number">5</span>])<span class="number">1</span>;px2 = (<span class="keyword">char</span> (*)[<span class="number">3</span>])<span class="number">1</span>;px3 = (<span class="keyword">int</span> (*)[<span class="number">2</span>][<span class="number">2</span>])<span class="number">1</span>;px1++;px2++;px3++;<span class="built_in">printf</span>(<span class="string">&quot;%d %d %d&quot;</span>,px1,px2,px3);<span class="comment">//21 4 17</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>指针数据的输出</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>(*px)[<span class="number">10</span>] = &amp;arr;<span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>,(*px)[<span class="number">0</span>],px[<span class="number">0</span>][<span class="number">0</span>]);<span class="comment">//(*px)[0] == *(px+0)[0] ==px[0][0]px++;//指针加减printf(&quot;%x %x\n&quot;,(*px)[0],px[0][0]);//ebp的值</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<p>总结:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span>void main()&#123;	int arr[] = &#123;1,2,3,4,5,6,7,8,9,0&#125;;	int(*px)[2][2] = (int (*)[2][2])arr;	<span class="comment">//*px == int [2][2]	printf(&quot;%x\n&quot;,px);	printf(&quot;%x\n&quot;,(*px));	printf(&quot;%x\n&quot;,px[0][1]);	printf(&quot;%x\n&quot;,(*px)[1][1]);	px++;	printf(&quot;%x\n&quot;,(*px)[1][1]);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602125825245.png" alt="image-20210602125825245"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//关于 px 与 *px#include&lt;stdio.h&gt;void main()&#123;	int arr[] = &#123;1,2,3,4,5,6,7,8,9,0&#125;;	int(*px)[2][2] = (int (*)[2][2])arr;	printf(&quot;px变化前:%x,(*px)变化前:%x\n&quot;,px,(*px));	printf(&quot;px变化后:%x,(*px)变化后:%x\n&quot;,px+1,(*px)+1);	return 0;&#125;//px变化的值:4*2*2=16,(*px)变化的值:4*2=8//相当于px指向的是整个数组,(*px)指向的是大数组包含的小数组//px相当于一维指针,(*px)相当于二维指针</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602130145462.png" alt="image-20210602130145462"></p>
+<h2 id="结构体相关"><a href="#结构体相关" class="headerlink" title="结构体相关"></a>结构体相关</h2><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>不是变量,是一种类型</p>
+<p>定义:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> 类型名&#123;</span>	<span class="comment">//可以定义多种类型	int a;	char b;	...&#125;;//这段代码本身不占用任何内存空间</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>结构体在定义的时候,除了自身以外,可以定义任何类型</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义结构类型的时候,直接定义变量eg.struct stPoint&#123;	int x;	int y;&#125;point1,point2,point3;//这种方式是分配内存的,因为不仅仅是定义新的类型,还定义了3个变量</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="结构体数组"><a href="#结构体数组" class="headerlink" title="结构体数组"></a>结构体数组</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义结构体类型struct stStudent&#123;	int age;	int level;&#125;;//定义结构体变量struct stStudent st;//定义结构体数组struct stStudent arr[10]; || stStudent arr[10];</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h3><p>创建结构体</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> Point&#123;	<span class="keyword">int</span> x;	<span class="keyword">int</span> y;&#125;;Point p;p.x = <span class="number">10</span>;p.y = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<p>声明结构体指针</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Point* ps;</span><br></pre></td></tr></table></figure>
+
+<p>为结构体指针赋值</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps = &amp;p;</span><br></pre></td></tr></table></figure>
+
+<p>通过指针读取数据</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps-&gt;y = <span class="number">100</span>;<span class="built_in">printf</span>(<span class="string">&quot;%d \n&quot;</span>,ps-&gt;y);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>注:<strong>千万不要把指针类型与指向的类型混为一谈</strong></p>
+<h2 id="字节对齐"><a href="#字节对齐" class="headerlink" title="字节对齐"></a>字节对齐</h2><p>使用字节对齐的目的:</p>
+<p>​    <strong>提高运行效率</strong></p>
+<p>用空间换时间</p>
+<p>​    <strong>一个变量占用n个字节,则该变量的起始地址必须是n的整数倍,即:存放起始地址%n = 0</strong></p>
+<p>​    <strong>如果是结构体,那么结构体的起始地址是其最宽度数据类型成员的整数倍</strong></p>
+<p>当对空间要求较高的时候,可以通过<code>#pragma pack(n)</code>来改变结构体成员的对齐方式</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack(n)struct ceShi&#123;	int a;	char b;&#125;#<span class="meta-keyword">pragma</span> pack()<span class="comment">//n称为对齐参数,可以自己设定   逐一对比,谁的字节小按谁对齐//结构体总大小 N = Min(最大成员,对齐参数) 是N的整数倍</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601171447171.png" alt="image-20210601171447171"></p>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><p><strong>一种无符号数据类型,给编译器看的,遵循编译器语法</strong></p>
+<p>​    <strong>1.带有 <code>*</code> 的变量类型的标准写法: 变量类型<code>*</code>  变量名</strong></p>
+<p>​    <strong>2.任何类型都可以加上<code>*</code>加上<code>*</code>以后是新的类型,统称”指针类型”</strong></p>
+<p>​    <strong>3.<code>*</code>可以是任意多个</strong></p>
+<p><strong>指针变量宽度</strong></p>
+<p>​    <strong>指针类型的宽度永远是4字节,无论类型是什么,无论有几个<code>*</code></strong></p>
+<p><strong>指针类型自加和自减(++ /–)</strong></p>
+<p>​    <strong>1.不带<code>*</code>类型的变量,++或者–,都是加1或者减1</strong></p>
+<p>​    <strong>2.带<code>*</code>类型的变量,++或者–  新增(减少)的数量是去掉一个<code>*</code>后变量的宽度</strong></p>
+<p><strong>指针类型的加减运算</strong></p>
+<p>​    <strong>1.指针类型的变量可以加,减一个整数,但是不能乘或者除</strong></p>
+<p>​    <strong>2.指针类型变量与其他整数相加或者相减时:</strong></p>
+<p>​            <em><em>指针类型变量 + N  =  指针变量类型 + N</em>(去掉一个<code>*</code>后类型的宽度)</em>*</p>
+<p>​            <em><em>指针类型变量 - N  =  指针变量类型 - N</em>(去掉一个<code>*</code>后类型的宽度)</em>*</p>
+<p><strong>指针的比较</strong></p>
+<p>​    <strong>反汇编代码可以表明这是一种无符号的数据类型</strong></p>
+<h3 id="指针函数"><a href="#指针函数" class="headerlink" title="指针函数"></a>指针函数</h3><p>​    <strong>本质就是函数,只不过函数的返回类型是某一种类型的指针</strong></p>
+<h3 id="指针取值的两种方式"><a href="#指针取值的两种方式" class="headerlink" title="指针取值的两种方式"></a>指针取值的两种方式</h3><p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601234550837.png" alt="image-20210601234550837"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp; ==&gt;加一个** ==&gt;减一个*</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601235617786.png" alt="image-20210601235617786"></p>
+<p>总结:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*(p+i) = p[i]*(*(p+i)+k) = p[i][k]*(*(*(p+i)+k)+m) = p[i][k][m]*(*(*(*(p+i)+k)+w)+t) = p[i][k][m][w][t]...<span class="comment">//*()与[]可以互相转换</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>什么是预处理?</p>
+<p>​    <strong>预处理一般是指在程序源代码被转换为二进制代码之前,由预处理器对程序源代码文本进行处理,处理后的结果再又编译器进一步编译。</strong></p>
+<p>预处理功能:</p>
+<p>​    主要包括<strong>宏定义,文件包含,条件编译</strong>三部分</p>
+<h3 id="条件编译"><a href="#条件编译" class="headerlink" title="条件编译"></a>条件编译</h3><p>常见预处理指令:</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>#define</strong></td>
+<td><strong>定义宏</strong></td>
+</tr>
+<tr>
+<td><strong>#undef</strong></td>
+<td><strong>取消已定义的宏</strong></td>
+</tr>
+<tr>
+<td><strong>#if</strong></td>
+<td><strong>如果给定条件为真,则编译下面代码</strong></td>
+</tr>
+<tr>
+<td><strong>#elif</strong></td>
+<td><strong>如果前面的#if给定条件不为真,当前条件为真,则编译下面代码</strong></td>
+</tr>
+<tr>
+<td><strong>#else</strong></td>
+<td><strong>同else</strong></td>
+</tr>
+<tr>
+<td><strong>#endif</strong></td>
+<td><strong>结束一个#if…#else条件编译块</strong></td>
+</tr>
+<tr>
+<td><strong>#ifdef</strong></td>
+<td><strong>如果宏已有定义,则编译下面代码</strong></td>
+</tr>
+<tr>
+<td><strong>#ifndef</strong></td>
+<td><strong>如果宏没有定义,则编译下面代码</strong></td>
+</tr>
+<tr>
+<td><strong>#include</strong></td>
+<td><strong>包含文件</strong></td>
+</tr>
+</tbody></table>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602184024368.png" alt="image-20210602184024368"></p>
+<h3 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//简单宏:#define 标识符 字符序列(标识符一般约定俗成为大写字母)#define FALSE 0#define NAME &quot;Re0hy&quot;//带参数的宏:#define 标识符(参数表) 字符序列#define MAX(A,B) ((A)&gt;(B)?(A):(B))//注意事项://1.只作为字符序列的替换工作,不作任何语法的检查,在编译前处理//2.宏名标识符与左圆括号直接不允许有空白符,应紧密连接在一起//3.为了避免出错,宏定义中给形参加上括号//4.多行声明时,回车换行前要加上\,即&quot;\[enter]&quot;,注意字符\后要紧跟回车键,中间不能有空格或者其他字符//5.末尾不需要分号</span></span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602181309541.png" alt="image-20210602181309541"></p>
+<p>提高代码的可读性:</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602181421987.png" alt="image-20210602181421987"></p>
+<p>注:<strong>使用<code>\</code>后,不要按空格,直接回车,否则编译器会报出各种各样的错误</strong></p>
+<p>实例:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span>#<span class="meta-keyword">define</span> A int method()&#123;#<span class="meta-keyword">define</span> B printf(<span class="meta-string">&quot;这是一个宏定义&quot;</span>);#<span class="meta-keyword">define</span> C return 0;#<span class="meta-keyword">define</span> D &#125;#<span class="meta-keyword">define</span> E method();<span class="comment">/*int method()&#123;   printf(&quot;这是一个宏定义&quot;);   return 0;&#125;*/</span>ABCDint main()&#123;	E	return 0;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602175950034.png" alt="image-20210602175950034"></p>
+<p>注:<strong>预处理的时候,并不会提示错误,只有编译的时候,出错了才会提示</strong></p>
+<p>宏与函数的区别</p>
+<p>宏优点:<strong>不会浪费新的堆栈空间,不需要提升新的堆栈空间</strong></p>
+<p><strong>函数只编译一次,宏用一次编译一次,多次调用宏,会使得代码显得臃肿</strong></p>
+<h3 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h3><p>有两种格式:</p>
+<p><strong><code>#include &quot;file&quot;</code>  与  <code>#include &lt;file&gt;</code></strong></p>
+<p>​    <strong>1.使用双引号,系统首先到当前目录下查找被包含的文件,如果没找到，再到系统指定的”包含文件目录”(由用户在配置环境时设置)去找</strong></p>
+<p>​    <strong>2.使用尖括号:直接到系统指定的”包含文件目录”去查找</strong></p>
+<p>包含文件目录:</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602190054548.png" alt="image-20210602190054548"></p>
+<p>总结:</p>
+<p>​    <strong>系统用&lt;&gt;</strong></p>
+<p>​    <strong>自己定义的用””</strong></p>
+<p>重复包含的解决方案:</p>
+<p>​    <strong>1.条件编译:通过预处理指令</strong></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210602191213172.png" alt="image-20210602191213172"></p>
+<p>​    <strong>2.前置声明(尽量这样做)</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//A.hvoid MyPrint1(Point* px);//B.hvoid MyPrint1(Point* px);//C.hstruct Point&#123;  ... &#125;;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>如上述情况,<code>A.h</code>与<code>B.h</code>都需要用到<code>C.h</code>中的<code>Point</code>,可以在<code>A.h</code>与<code>B.h</code>中输入<code>struct Point;</code>,这个过程就叫做前置声明</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//A.hstruct Point;void MyPrint1(Point* px);//B.hstruct Point;void MyPrint1(Point* px);//C.hstruct Point&#123;  ... &#125;;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注:不推荐在<code>A.h</code>,<code>B.h</code>引用<code>C.h</code>，可能会出现报错,解决起来很麻烦</strong></p>
+<p>​    <strong>自己写的头文件,最好不要包含其他头文件</strong></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>strlen</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strlen</span><span class="params">(<span class="keyword">char</span>* s)</span><span class="comment">//返回值是字符串s的长度,不包含结束符&#x27;\0&#x27;</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>strcpy</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* dest,<span class="keyword">char</span>* src)</span></span>;<span class="comment">//复制字符串src到dest中.返回指针为dest的值</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>strcat</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* sr=trcat(<span class="keyword">char</span>*dest,<span class="keyword">char</span>*src);<span class="comment">//将字符串src添加到dest尾部.返回指针为dest的值</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>strcmp</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strcmp</span><span class="params">(<span class="keyword">char</span>* s1,<span class="keyword">char</span>* s2)</span></span>;<span class="comment">//一样返回0 不一样返回非0</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="开机自启动小程序"><a href="#开机自启动小程序" class="headerlink" title="开机自启动小程序"></a>开机自启动小程序</h1><p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601134216931.png" alt="image-20210601134216931"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//找到下面位置计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601134319394.png" alt="image-20210601134319394"></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601134403004.png" alt="image-20210601134403004"></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210601134754180.png" alt="image-20210601134754180"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/06/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" data-id="ckt87euaa0000nsdte1u79x7i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/09/06/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
