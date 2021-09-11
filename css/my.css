@@ -1,1 +1,7 @@
 /* Here is your custom css styles. */
+*{
+    cursor: url("/medias/鼠标.cur"),auto!important;
+}
+:active{
+    cursor: url("/medias/shubiao.cur"),auto!important;
+}
