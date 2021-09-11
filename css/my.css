@@ -3,5 +3,5 @@
     cursor: url("/medias/shubiao.cur"),auto!important;
 }
 :active{
-    cursor: url("/medias/leimu.cur"),auto!important;
+    cursor: url("/medias/shubiao.cur"),auto!important;
 }
