@@ -481,7 +481,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-10
+                    2021-09-15
                 </div>
                 
 
@@ -511,7 +511,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>Hexo+Github博客搭建教程</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​    开始学习技术的时候，就有很多师傅推荐搭建博客，但是一直没开始搭建博客（就是因为穷。后来机缘巧合之下打听到可以用<code>Hexo</code>+<code>Github</code>免费搭建博客，最后只需要出购买域名的钱，再一次有了搭建博客的想法。</p>
+<h1 id="前"><a href="#前" class="headerlink" title="前"></a>前</h1><p>​    开始学习技术的时候，就有很多师傅推荐搭建博客，但是一直没开始搭建博客（就是因为穷。后来机缘巧合之下打听到可以用<code>Hexo</code>+<code>Github</code>免费搭建博客，最后只需要出购买域名的钱，再一次有了搭建博客的想法。</p>
 <p>把第一次搭建博客过程记录下来。</p>
 <p><strong>以下仅为 Windows10 下搭建博客流程。</strong></p>
 <h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><ul>
@@ -538,27 +538,27 @@
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210909201900753.png" alt="image-20210909201900753"></p>
 <p>下载完成后，运行程序，同理一直next就行。</p>
 <p>安装完成后，可以打开<code>cmd</code>或者<code>Git Bash Here</code>，进行检测是否安装成功：</p>
-<pre class=" language-bash"><code class="language-bash">node -v      
+<pre class="line-numbers language-bash"><code class="language-bash">node -v      
 <span class="token function">npm</span> -v
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>显示版本说明安装成功。</p>
 </li>
 <li><p><strong>Hexo</strong></p>
 <p>保证前面两个工具安装成功后，鼠标右击，打开<code>cmd</code>，输入如下代码用于安装<code>hexo</code>:</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>中间过程可能会有报错，可以忽略。尝试能否查看版本号:</p>
-<pre class=" language-bash"><code class="language-bash">hexo -v
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">hexo -v
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>显示版本号就说明安装成功。</p>
 <p>我们接下来可能需要用到的相关指令:</p>
-<pre class=" language-bash"><code class="language-bash">hexo init  --<span class="token operator">></span>初始化blog
+<pre class="line-numbers language-bash"><code class="language-bash">hexo init  --<span class="token operator">></span>初始化blog
 hexo clean --<span class="token operator">></span>清楚之前生成的东西
 hexo g  <span class="token operator">==</span> hexo generate  --<span class="token operator">></span> 生成静态文章<span class="token punctuation">(</span>建议用缩写<span class="token punctuation">)</span>
 hexo d  <span class="token operator">==</span> hexo deploy    --<span class="token operator">></span> 部署文章,用于上传本地博客内容<span class="token punctuation">(</span>建议缩写<span class="token punctuation">)</span>
 hexo new <span class="token string">""</span>   --<span class="token operator">></span>创建blog文章
 hexo new page <span class="token string">""</span>  --<span class="token operator">></span>创建blog页
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p><strong>GitHub</strong></p>
 <p>注册一个<code>GitHub</code>账号，记录用户名，账号，密码。后续可能会要求提供这些相关信息。</p>
@@ -568,8 +568,8 @@ hexo new page <span class="token string">""</span>  --<span class="token operato
 <ul>
 <li><p>创建一个空文档（名字任意），用于保存blog内容。</p>
 <p>鼠标右击该文档，打开<code>Git Bash Here</code> ，初始化博客内容</p>
-<pre class=" language-bash"><code class="language-bash">hexo init 
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">hexo init 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>忽视初始化过程中发出的警报。</p>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210909204704094.png" alt="image-20210909204704094"></p>
 <p>安装必备的组件：</p>
@@ -591,9 +591,9 @@ hexo new page <span class="token string">""</span>  --<span class="token operato
 <p><strong>访问本地博客</strong></p>
 <ul>
 <li><p>使用指令:</p>
-<pre><code>hexo g
+<pre class="line-numbers language-bash"><code class="language-bash">hexo g
 hexo s
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>完成后，会显示一个网址:<a target="_blank" rel="noopener" href="http://localhost:4000/,%E7%82%B9%E5%87%BB%E8%BF%9B%E5%8E%BB%EF%BC%8C%E5%B0%B1%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2">http://localhost:4000/,点击进去，就会出现一个本地博客</a></p>
 </li>
 </ul>
@@ -617,31 +617,31 @@ hexo s
 <h1 id="第三部分-定制个性化博客-matery主题"><a href="#第三部分-定制个性化博客-matery主题" class="headerlink" title="第三部分 定制个性化博客  matery主题"></a>第三部分 定制个性化博客  matery主题</h1><p>通过第二部分获得的本地博客，可以用了，但是观赏性极差，还没有逼格。这肯定不行，必须来一手个性化。</p>
 <p>这里仅提供<code>matery</code>主题的部分配置。</p>
 <p>将主目录<code>_config.yml</code>内<code>language</code>修改一下，变成如下内容，就可以让博客内容主动显示成中文:</p>
-<pre class=" language-bash"><code class="language-bash">language: zh-CN
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">language: zh-CN
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210909222725455.png" alt="image-20210909222725455"></p>
 <h2 id="1-主题修改"><a href="#1-主题修改" class="headerlink" title="1.主题修改"></a>1.主题修改</h2><p>首先下载<code>matery</code>主题包:<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">传送门</a></p>
 <p>然后将主题包放到你存放博客文件的<code>themes</code>文件夹下，然后打开主目录下的<code>_config.yml</code>,将其中默认主题名字修改一下：</p>
-<pre class=" language-bash"><code class="language-bash">theme: landscap
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">theme: landscap
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>修改后如下:</p>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210909212104544.png" alt="image-20210909212104544"></p>
 <p>保存后，查看本地博客，就会发现变成了相关主题，但是上面一排都没有设置页，导致不能访问。</p>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/YKwFax1NrtVL6Zo.jpg" alt="hexo-theme-1.jpg"></p>
 <h2 id="2-添加界面"><a href="#2-添加界面" class="headerlink" title="2.添加界面"></a>2.添加界面</h2><h3 id="2-1添加404界面"><a href="#2-1添加404界面" class="headerlink" title="2.1添加404界面"></a>2.1添加404界面</h3><p>这个主题默认没有一个404界面，我们可以人为添加一个。可以在主目录<code>/source/</code>下创建一个<code>404.md</code>，或者通过如下指令创建<code>404.md</code>:</p>
-<pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"404"</span>
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">hexo new page <span class="token string">"404"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>并在其中添加内容(所有都要添加):</p>
-<pre class=" language-bash"><code class="language-bash">---
+<pre class="line-numbers language-bash"><code class="language-bash">---
 title: 404
 date: 2021-09-09 21:34:12
 type: <span class="token string">"404"</span>
 layout: <span class="token string">"404"</span>
 description: <span class="token string">"3mm～，你没有猜错，这是一个懒人，还没完善这里，QAQ :("</span>
 ---
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后在<code>/themes/matery/layout/</code>目录下新建一个<code>404.ejs</code>文件，内容如下：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
     /* don<span class="token string">'t remove. */
     .about-cover {
         height: 75vh;
@@ -669,61 +669,61 @@ description: <span class="token string">"3mm～，你没有猜错，这是一个
     // 每天切换 banner 图.  Switch banner image every day.
     $('</span>.bg-cover<span class="token string">').css('</span>background-image<span class="token string">', '</span>url<span class="token punctuation">(</span>/medias/banner/<span class="token string">' + new Date().getDay() + '</span>.jpg<span class="token punctuation">)</span>'<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span>/script<span class="token operator">></span>
-</code></pre>
-<h3 id="2-2新建标签-tags-页"><a href="#2-2新建标签-tags-页" class="headerlink" title="2.2新建标签 tags 页"></a>2.2新建标签 tags 页</h3><pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"tags"</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-2新建标签-tags-页"><a href="#2-2新建标签-tags-页" class="headerlink" title="2.2新建标签 tags 页"></a>2.2新建标签 tags 页</h3><pre class="line-numbers language-bash"><code class="language-bash">hexo new page <span class="token string">"tags"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>新建出来的<code>/source/tags/index.md</code>，写入如下内容:</p>
-<pre class=" language-bash"><code class="language-bash">---
+<pre class="line-numbers language-bash"><code class="language-bash">---
 title: tags
 date: 2021-09-09 21:34:12
 type: <span class="token string">"tags"</span>
 layout: <span class="token string">"tags"</span>
 ---
-</code></pre>
-<h3 id="2-3新建分类-categories-页"><a href="#2-3新建分类-categories-页" class="headerlink" title="2.3新建分类 categories 页"></a>2.3新建分类 categories 页</h3><pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"categories"</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-3新建分类-categories-页"><a href="#2-3新建分类-categories-页" class="headerlink" title="2.3新建分类 categories 页"></a>2.3新建分类 categories 页</h3><pre class="line-numbers language-bash"><code class="language-bash">hexo new page <span class="token string">"categories"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>新建出来的<code>/source/categories/index.md</code>，写入如下内容:</p>
-<pre class=" language-bash"><code class="language-bash">---
+<pre class="line-numbers language-bash"><code class="language-bash">---
 title: categories
 date: 2021-09-09 21:34:12
 type: <span class="token string">"categories"</span>
 layout: <span class="token string">"categories"</span>
 ---
-</code></pre>
-<h3 id="2-4新建关于我-about-页"><a href="#2-4新建关于我-about-页" class="headerlink" title="2.4新建关于我 about 页"></a>2.4新建关于我 about 页</h3><pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"about"</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-4新建关于我-about-页"><a href="#2-4新建关于我-about-页" class="headerlink" title="2.4新建关于我 about 页"></a>2.4新建关于我 about 页</h3><pre class="line-numbers language-bash"><code class="language-bash">hexo new page <span class="token string">"about"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>新建出来的<code>/source/about/index.md</code>，写入如下内容:</p>
-<pre class=" language-bash"><code class="language-bash">---
+<pre class="line-numbers language-bash"><code class="language-bash">---
 title: about
 date: 2021-09-09 21:34:12
 type: <span class="token string">"about"</span>
 layout: <span class="token string">"about"</span>
 ---
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后在主题目录<code>_config.yml</code>下找到:</p>
-<pre class=" language-bash"><code class="language-bash">profile:
+<pre class="line-numbers language-bash"><code class="language-bash">profile:
   avatar: /medias/avatar.jpg
   career: Software Engineer
   introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>以上为默认信息，可以根据自己需要修改内容</p>
 <blockquote>
 <p>图片地址<img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210910125915088.png" alt="image-20210910125915088"></p>
 </blockquote>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210910125449822.png" alt="image-20210910125449822"></p>
 <p>我的项目，我的技能，相册等设置就在<code>profile</code>后面，根据注释自行选择</p>
-<h3 id="2-5新建友情连接-friends-页"><a href="#2-5新建友情连接-friends-页" class="headerlink" title="2.5新建友情连接 friends 页"></a>2.5新建友情连接 friends 页</h3><pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"friends"</span>
-</code></pre>
+<h3 id="2-5新建友情连接-friends-页"><a href="#2-5新建友情连接-friends-页" class="headerlink" title="2.5新建友情连接 friends 页"></a>2.5新建友情连接 friends 页</h3><pre class="line-numbers language-bash"><code class="language-bash">hexo new page <span class="token string">"friends"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>新建出来的<code>/source/friends/index.md</code>，写入如下内容:</p>
-<pre class=" language-bash"><code class="language-bash">---
+<pre class="line-numbers language-bash"><code class="language-bash">---
 title: friends
 date: 2021-09-09 21:34:12
 type: <span class="token string">"friends"</span>
 layout: <span class="token string">"friends"</span>
 ---
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>当然，剩下部分还是需要我们自己补齐，毕竟不像前几个页面，你只需要创建一个链接，这里我们需要提供剩下内容,示例:</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
         <span class="token string">"avatar"</span><span class="token keyword">:</span> <span class="token string">"https://myu-data.oss-cn-chengdu.aliyuncs.com/img/QQ%E5%9B%BE%E7%89%8720210706183646.jpg"</span>,
         <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"Myu_"</span>,
@@ -732,30 +732,30 @@ layout: <span class="token string">"friends"</span>
         <span class="token string">"title"</span><span class="token keyword">:</span> <span class="token string">"路过"</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">]</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210909230125110.png" alt="image-20210909230125110"></p>
 <h2 id="3-代码高亮"><a href="#3-代码高亮" class="headerlink" title="3.代码高亮"></a>3.代码高亮</h2><p><code>matery</code>主题的代码高亮不是很理想，下载一个用于代码美化的插件:<code>hexo-prism-plugin</code></p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>将主目录下<code>_config.yml</code>内相关代码高显关闭</p>
-<pre class=" language-python"><code class="language-python">highlight<span class="token punctuation">:</span>            <span class="token comment" spellcheck="true">#代码块的设置</span>
+<pre class="line-numbers language-python"><code class="language-python">highlight<span class="token punctuation">:</span>            <span class="token comment" spellcheck="true">#代码块的设置</span>
   enable<span class="token punctuation">:</span> false            <span class="token comment" spellcheck="true">#开启代码块高亮</span>
   line_number<span class="token punctuation">:</span> true        <span class="token comment" spellcheck="true">#如果未指定语言，则启用自动检测</span>
   auto_detect<span class="token punctuation">:</span> false        <span class="token comment" spellcheck="true">#显示行数</span>
   tab_replace<span class="token punctuation">:</span> <span class="token string">''</span>        <span class="token comment" spellcheck="true">#用n个空格替换tabs；如果值为空，则不会替换tabs</span>
   wrap<span class="token punctuation">:</span> ture
   hljs<span class="token punctuation">:</span> false
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后在末尾添加我们自己的代码:</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 关闭原有的代码高亮，使用自己的</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 关闭原有的代码高亮，使用自己的</span>
 prism_plugin<span class="token punctuation">:</span>
   mode<span class="token punctuation">:</span> <span class="token string">'preprocess'</span>    <span class="token comment" spellcheck="true"># realtime/preprocess</span>
   theme<span class="token punctuation">:</span> <span class="token string">'tomorrow'</span>
   line_number<span class="token punctuation">:</span> false    <span class="token comment" spellcheck="true"># default false</span>
   custom_css<span class="token punctuation">:</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="4-增加建站时间"><a href="#4-增加建站时间" class="headerlink" title="4.增加建站时间"></a>4.增加建站时间</h2><p>修改主目录<code>/themes/matery/layout/_partial</code>中的<code>footer.ejs</code>，末尾加上：</p>
-<pre class=" language-c"><code class="language-c"><span class="token operator">&lt;</span>script language<span class="token operator">=</span>javascript<span class="token operator">></span>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token operator">&lt;</span>script language<span class="token operator">=</span>javascript<span class="token operator">></span>
     function <span class="token function">siteTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         window<span class="token punctuation">.</span><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token string">"siteTime()"</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         var seconds <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
@@ -782,19 +782,19 @@ prism_plugin<span class="token punctuation">:</span>
     <span class="token punctuation">}</span>
     <span class="token function">siteTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>大致效果:</p>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210909221627276.png" alt="image-20210909221627276"></p>
 <h2 id="5-添加动漫人物"><a href="#5-添加动漫人物" class="headerlink" title="5.添加动漫人物"></a>5.添加动漫人物</h2><p>输入两次指令+添加一次代码即可实现:</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save hexo-helper-live2d
-</code></pre>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> live2d-widget-model-shizuku
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save hexo-helper-live2d
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> live2d-widget-model-shizuku
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
 <p>可以根据自己需求进行修改(<a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget-models">原作者地址</a></p>
 </blockquote>
 <p>然后在主目录<code>_config.yml</code>末尾添加内容:</p>
-<pre class=" language-bash"><code class="language-bash">live2d:
+<pre class="line-numbers language-bash"><code class="language-bash">live2d:
     enable: <span class="token boolean">true</span>
     scriptFrom: local
     pluginRootPath: live2dw/
@@ -812,14 +812,14 @@ prism_plugin<span class="token punctuation">:</span>
         show: <span class="token boolean">false</span>
     react:
         opacity: 0.7
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果图:</p>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210909222312534.png" alt="image-20210909222312534"></p>
 <p>更多功能自行百度。</p>
 <h2 id="6-添加blog动态标签"><a href="#6-添加blog动态标签" class="headerlink" title="6.添加blog动态标签"></a>6.添加blog动态标签</h2><p>所谓动态标签，如下:</p>
 <p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210909230659955.png" alt="image-20210909230659955"></p>
 <p>打开<code>themes/matery/layout/layout.ejs</code>，在末尾添加如下代码:</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
     var OriginTitile <span class="token operator">=</span> document.title,
         st<span class="token punctuation">;</span>
     document.addEventListener<span class="token punctuation">(</span><span class="token string">"visibilitychange"</span>, <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -829,38 +829,38 @@ prism_plugin<span class="token punctuation">:</span>
             <span class="token punctuation">}</span>, 3e3<span class="token punctuation">))</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token operator">&lt;</span>/script<span class="token operator">></span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>根据需求需改即可，然后在<code>Git Bash Here  </code>中</p>
 <pre><code>hexo clean
 hexo g
 </code></pre>
 <h2 id="7-添加搜索功能"><a href="#7-添加搜索功能" class="headerlink" title="7.添加搜索功能"></a>7.添加搜索功能</h2><p>使用一个名为<code>hexo-generator-search</code>的<code>Hexo</code>插件来实现内容搜索，安装:</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在主目录<code>_config.yml</code>末尾添加如下内容:</p>
-<pre class=" language-bash"><code class="language-bash">search:
+<pre class="line-numbers language-bash"><code class="language-bash">search:
   path: search.xml
   field: post
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="8-鼠标拖尾-—彩虹星星掉落跟随"><a href="#8-鼠标拖尾-—彩虹星星掉落跟随" class="headerlink" title="8.鼠标拖尾 —彩虹星星掉落跟随"></a>8.鼠标拖尾 —彩虹星星掉落跟随</h2><blockquote>
 <p>由于主题自带点击爱心标志，感觉还行，就没有再去修改其他类型。</p>
 </blockquote>
 <p>在<code>themes/matery/source/js</code>目录下新建<code>cursor.js</code>文件，复制粘贴<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Yafine/cdn@3.2.5/source/js/cursor.js">传送门</a>里的所有内容</p>
 <p>然后在<code>themes/matery/layout/layout.ejs</code>末尾添加:</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"/js/cursor.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"/js/cursor.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="9-自定义鼠标样式"><a href="#9-自定义鼠标样式" class="headerlink" title="9.自定义鼠标样式"></a>9.自定义鼠标样式</h2><p>获取一个鼠标样式，放在主题文件夹内的任意位置</p>
 <blockquote>
 <p>推荐<code>matery/source/medias</code></p>
 </blockquote>
 <p>以我的为例，我的鼠标样式存放在<code>matery/source/medias</code>下，打开主题目录<code>/source/css/my.css</code>，添加如下内容:</p>
-<pre class=" language-bash"><code class="language-bash">*<span class="token punctuation">{</span>
+<pre class="line-numbers language-bash"><code class="language-bash">*<span class="token punctuation">{</span>
     cursor: url<span class="token punctuation">(</span><span class="token string">"/medias/shubiao.cur"</span><span class="token punctuation">)</span>,auto<span class="token operator">!</span>important<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 :active<span class="token punctuation">{</span>
     cursor: url<span class="token punctuation">(</span><span class="token string">"/medias/shubiao.cur"</span><span class="token punctuation">)</span>,auto<span class="token operator">!</span>important<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>第一个为正常显示的鼠标样式，第二个为点击鼠标左键后显示的样式</p>
 <blockquote>
 <p>补:过于花里胡哨的样式可能会对后续查看blog有一定的影响</p>
@@ -871,7 +871,7 @@ hexo g
 <ul>
 <li><p><code>/themes/matery/layout/_partial/mobile-nav.ejs</code></p>
 <p>将如下内容:</p>
-<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"menu-list mobile-menu-list"</span><span class="token operator">></span>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"menu-list mobile-menu-list"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">%</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>menu<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>li<span class="token operator">></span>
         <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%- theme.menu[key].url %>"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"waves-effect waves-light"</span><span class="token operator">></span>
@@ -893,9 +893,9 @@ hexo g
     <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>替换成:</p>
-<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 支持二级菜单特性  <span class="token operator">--</span><span class="token operator">></span>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 支持二级菜单特性  <span class="token operator">--</span><span class="token operator">></span>
 <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"menu-list mobile-menu-list"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">%</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>menu<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"m-nav-item"</span><span class="token operator">></span>
@@ -943,11 +943,11 @@ hexo g
         <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
       <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p><code>/themes/matery/layout/_partial/navagtion.ejs</code></p>
 <p>将如下内容:</p>
-<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#"</span> data<span class="token operator">-</span>target<span class="token operator">=</span><span class="token string">"mobile-nav"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"sidenav-trigger button-collapse"</span><span class="token operator">></span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-navicon"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#"</span> data<span class="token operator">-</span>target<span class="token operator">=</span><span class="token string">"mobile-nav"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"sidenav-trigger button-collapse"</span><span class="token operator">></span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-navicon"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
 <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"right"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">%</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>menu<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"hide-on-med-and-down"</span><span class="token operator">></span>
@@ -965,9 +965,9 @@ hexo g
         <span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>替换成:</p>
-<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 支持二级菜单特性  <span class="token operator">--</span><span class="token operator">></span>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 支持二级菜单特性  <span class="token operator">--</span><span class="token operator">></span>
 <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#"</span> data<span class="token operator">-</span>target<span class="token operator">=</span><span class="token string">"mobile-nav"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"sidenav-trigger button-collapse"</span><span class="token operator">></span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-navicon"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
 <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"right nav-menu"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">%</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>menu<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
@@ -1012,11 +1012,11 @@ hexo g
         <span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p><code>/themes/matery/source/css/matery.css</code></p>
 <p>末尾添加内容:</p>
-<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 二级菜单样式定义  */</span>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 二级菜单样式定义  */</span>
 
 <span class="token selector"><span class="token class">.nav-menu</span> </span><span class="token punctuation">{</span><span class="token punctuation">}</span>
 
@@ -1140,11 +1140,11 @@ hexo g
     <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#FFF</span><span class="token punctuation">;</span>
     <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p><code>/themes/matery/source/js/matery.js</code></p>
 <p>再最后一个<code>});</code>之前添加:</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 增加二级菜单功能 </span>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 增加二级菜单功能 </span>
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav-menu>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">'nav-show'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">siblings</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">'nav-show'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1164,11 +1164,11 @@ hexo g
                 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.m-nav-item.m-nav-show'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">'m-nav-show'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 <p>然后打开主题目录<code>_config.yml</code>，进行下列样式修改:</p>
-<pre class=" language-python"><code class="language-python">Medias<span class="token punctuation">:</span>
+<pre class="line-numbers language-python"><code class="language-python">Medias<span class="token punctuation">:</span>
    icon<span class="token punctuation">:</span> fas fa<span class="token operator">-</span>list
    children<span class="token punctuation">:</span>
      <span class="token operator">-</span> name<span class="token punctuation">:</span> Musics
@@ -1178,38 +1178,38 @@ hexo g
        url<span class="token punctuation">:</span> <span class="token operator">/</span>movies
        icon<span class="token punctuation">:</span> fas fa<span class="token operator">-</span>film
      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="11-添加文章字数统计"><a href="#11-添加文章字数统计" class="headerlink" title="11.添加文章字数统计"></a>11.添加文章字数统计</h2><p>安装<code>hexo-wordcount</code>插件</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i --save hexo-wordcount
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> i --save hexo-wordcount
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>主题目录<code>_config.yml</code>，找到如下信息</p>
-<pre class=" language-python"><code class="language-python">wordCount<span class="token punctuation">:</span>
+<pre class="line-numbers language-python"><code class="language-python">wordCount<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> false  <span class="token comment" spellcheck="true">#将这个值设置为 true </span>
   postWordCount<span class="token punctuation">:</span> true
   min2read<span class="token punctuation">:</span> true
   totalCount<span class="token punctuation">:</span> true
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="12-修改主题颜色"><a href="#12-修改主题颜色" class="headerlink" title="12.修改主题颜色"></a>12.修改主题颜色</h2><p>以下修改均在主题目录<code>/source/css/matery.css</code>中:</p>
 <ul>
 <li><p>修改横幅颜色:</p>
 <p>搜索:<code>.bg-color</code>,找到后，根据自己喜好进行修改(下为个人配置)</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.bg-color</span> </span><span class="token punctuation">{</span>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.bg-color</span> </span><span class="token punctuation">{</span>
     <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right, <span class="token hexcode">#3230bf</span> <span class="token number">0%</span>, <span class="token hexcode">#9d0f7a</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">/*修改颜色*/</span>
     <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0.8</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*透明效果*/</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>去除动态背景颜色:</p>
 <p>我感觉挺烦的，看着不舒服，会选择将它去掉</p>
 <p>搜索:<code>@-webkit-keyframes rainbow</code>以及<code>@keyframes rainbow</code>，分别将它们内容注释掉</p>
-<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rainbow</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rainbow</span> <span class="token punctuation">{</span>
    <span class="token comment" spellcheck="true">/* 动态切换背景颜色. */</span>
 <span class="token punctuation">}</span>
 
 <span class="token atrule"><span class="token rule">@keyframes</span> rainbow</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">/* 动态切换背景颜色. */</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 <h2 id="13-设置背景图-网站favicon-网站LOGO"><a href="#13-设置背景图-网站favicon-网站LOGO" class="headerlink" title="13.设置背景图+网站favicon+网站LOGO"></a>13.设置背景图+网站favicon+网站LOGO</h2><p>可以将自己的照片替换主题目录<code>/source</code>及其<code>/source/medias</code>下的相关图片</p>
