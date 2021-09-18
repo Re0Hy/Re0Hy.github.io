@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="xxxxx, Myu_">
+    <meta name="keywords" content="2021羊城杯_DeltX, Myu_">
     <meta name="description" content="懒虫一枚">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>xxxxx | Myu_</title>
+    <title>2021羊城杯_DeltX | Myu_</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -259,12 +259,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">xxxxx</h1>
+                    <h1 class="description center-align post-title">2021羊城杯_DeltX</h1>
                 </div>
             </div>
         </div>
@@ -378,12 +378,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
+                                <span class="chip bg-color">羊城杯</span>
+                            </a>
+                        
+                            <a href="/tags/re/">
+                                <span class="chip bg-color">re</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/re/" class="post-category">
+                                re
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -392,28 +409,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-10
+                    2021-09-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-10
+                    2021-09-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    466
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -428,7 +445,81 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>直接打开就能看到伪代码，逐步分析</p>
+<p>开始判断是否加上了flag外壳，并判断了长度</p>
+<pre class="line-numbers language-c"><code class="language-c">  Input <span class="token operator">=</span> 0i64<span class="token punctuation">;</span>
+  v170 <span class="token operator">=</span> 0i64<span class="token punctuation">;</span>
+  v171 <span class="token operator">=</span> 0i64<span class="token punctuation">;</span>
+  <span class="token function">sub_140001020</span><span class="token punctuation">(</span><span class="token string">"Input your flag here:\r\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">,</span> envp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">sub_140001080</span><span class="token punctuation">(</span><span class="token string">"%46s"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span>_BYTE<span class="token punctuation">)</span>Input <span class="token operator">!=</span> <span class="token string">'S'</span>
+    <span class="token operator">||</span> <span class="token operator">*</span><span class="token punctuation">(</span>_WORD <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'na'</span>
+    <span class="token operator">||</span> <span class="token operator">*</span><span class="token punctuation">(</span>_DWORD <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'roFg'</span>
+    <span class="token operator">||</span> <span class="token function">BYTE7</span><span class="token punctuation">(</span>Input<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'{'</span>
+    <span class="token operator">||</span> <span class="token function">BYTE8</span><span class="token punctuation">(</span>v171<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'}'</span> <span class="token punctuation">)</span>                     <span class="token comment" spellcheck="true">// SangFor{******************}</span>
+  <span class="token punctuation">{</span>                                             <span class="token comment" spellcheck="true">// 动调确定len=41</span>
+    <span class="token keyword">goto</span> LABEL_155<span class="token punctuation">;</span>                             <span class="token comment" spellcheck="true">// Error</span>
+  <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>长度判断需要在汇编层面看（最开始动调的时候，没有注意长度问题，输入任意长度的值，在套了正确外壳的情况下，依旧会跳转到LABEL_155），仔细看判断<code>{</code>,与<code>}</code>之间判断的值长度，就可以知道具体输入了多少值</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210918214510465.png" alt="image-20210918214510465"></p>
+<p>然后进行了一大堆的值进行</p>
+<pre class="line-numbers language-c"><code class="language-c"> v5 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  I <span class="token operator">=</span> 0i64<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span> <span class="token number">1</span> <span class="token punctuation">)</span>                                   <span class="token comment" spellcheck="true">// 能输入的值:[0-9][A-Z]</span>
+  <span class="token punctuation">{</span>
+    v7 <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input <span class="token operator">+</span> I <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> __int8<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_BYTE <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input <span class="token operator">+</span> I <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">9u</span> <span class="token punctuation">)</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    v8 <span class="token operator">=</span> v5 <span class="token operator">-</span> <span class="token number">0x30</span><span class="token punctuation">;</span>
+LABEL_11<span class="token punctuation">:</span>
+    <span class="token operator">++</span>I<span class="token punctuation">;</span>
+    v5 <span class="token operator">=</span> <span class="token number">16</span> <span class="token operator">*</span> <span class="token punctuation">(</span>v7 <span class="token operator">+</span> v8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span> I <span class="token operator">>=</span> <span class="token number">4</span> <span class="token punctuation">)</span>                               <span class="token comment" spellcheck="true">// 将四个字符转换成十六进制。比如说输入1234,转换成0x1234</span>
+    <span class="token punctuation">{</span>
+      v9 <span class="token operator">=</span> v5 <span class="token operator">>></span> <span class="token number">4</span><span class="token punctuation">;</span>
+      v10 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token keyword">goto</span> LABEL_14<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> __int8<span class="token punctuation">)</span><span class="token punctuation">(</span>v7 <span class="token operator">-</span> <span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">5u</span> <span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    v8 <span class="token operator">=</span> v5 <span class="token operator">-</span> <span class="token string">'7'</span><span class="token punctuation">;</span>
+    <span class="token keyword">goto</span> LABEL_11<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>吐槽一下，明明可以写函数或者循环实现这个操作，但是它就是要一个一个来写….后面判断也是….</p>
+</blockquote>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210918215816924.png" alt="image-20210918215816924"></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210918215840421.png" alt="image-20210918215840421"></p>
+<p>然后两两数字为一组，进行运算，并将运算后的值和对应值比较，类似于解二元一次方程。</p>
+<blockquote>
+<p>这里我是直接动调看输出值和两个输入值有什么关联，多次尝试得出关系，并没有仔细看内部的位运算，理论上可以直接模拟代码获取两个输入值</p>
+</blockquote>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true">#两者关系</span>
+flag0<span class="token operator">*</span>flag1<span class="token operator">=</span>num1
+flag0<span class="token operator">-</span>flag1<span class="token operator">=</span>num2
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>搓脚本：</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">Save</span><span class="token punctuation">(</span>mul<span class="token punctuation">,</span>sub<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> a <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0xffff</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        b<span class="token operator">=</span><span class="token punctuation">(</span>a<span class="token operator">-</span><span class="token punctuation">(</span>sub<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token number">0xffff</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token operator">*</span>b<span class="token operator">==</span>mul<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%X%X"</span><span class="token operator">%</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> __name__<span class="token operator">==</span><span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    mul<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0x249E15C5</span><span class="token punctuation">,</span><span class="token number">0x34C7EAE2</span><span class="token punctuation">,</span><span class="token number">0x637973BA</span><span class="token punctuation">,</span><span class="token number">0xE5FD104</span><span class="token punctuation">]</span>
+    sub<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0xFFFF59BC</span><span class="token punctuation">,</span><span class="token number">0x216B</span><span class="token punctuation">,</span><span class="token number">0x819D</span><span class="token punctuation">,</span><span class="token number">0x9393</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"SangFor{"</span><span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>mul<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        Save<span class="token punctuation">(</span>mul<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>sub<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"}"</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>flag:</p>
+<pre class="line-numbers language-python"><code class="language-python">SangFor<span class="token punctuation">{</span><span class="token number">2C7BD2BF862564BAED0B6B6EA94F15BC</span><span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210918220729796.png" alt="image-20210918220729796"></p>
+
                 
             </div>
             <hr/>
@@ -441,7 +532,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
+                                    <span class="chip bg-color">羊城杯</span>
+                                </a>
+                            
+                                <a href="/tags/re/">
+                                    <span class="chip bg-color">re</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -487,34 +586,50 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/xxxxx/index.html">
+                <a href="/2021/09/18/%E7%BE%8A%E5%9F%8E%E6%9D%AF_DeltX/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="xxxxx">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2021羊城杯_DeltX">
                         
-                        <span class="card-title">xxxxx</span>
+                        <span class="card-title">2021羊城杯_DeltX</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            2021羊城杯_DeltX
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-18
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Myu_
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/re/" class="post-category">
+                                    re
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
+                        <span class="chip bg-color">羊城杯</span>
+                    </a>
+                    
+                    <a href="/tags/re/">
+                        <span class="chip bg-color">re</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -522,37 +637,52 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/xxxxx/index.html">
+                <a href="/2021/09/17/%E7%BE%8A%E5%9F%8E%E6%9D%AF_EasyVM/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="xxxxx">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="2021羊城杯_EasyVM">
                         
-                        <span class="card-title">xxxxx</span>
+                        <span class="card-title">2021羊城杯_EasyVM</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Smc+VM
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Myu_
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/re/" class="post-category">
+                                    re
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
+                        <span class="chip bg-color">羊城杯</span>
+                    </a>
+                    
+                    <a href="/tags/re/">
+                        <span class="chip bg-color">re</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
