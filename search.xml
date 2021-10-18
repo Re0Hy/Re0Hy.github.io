@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>2021红帽杯_ezRev</title>
+      <link href="/2021/10/19/2021%E7%BA%A2%E5%B8%BD%E6%9D%AF_ezRev/"/>
+      <url>/2021/10/19/2021%E7%BA%A2%E5%B8%BD%E6%9D%AF_ezRev/</url>
+      
+        <content type="html"><![CDATA[<h1 id="0x1"><a href="#0x1" class="headerlink" title="0x1"></a>0x1</h1><p>其实就是一个简单的xtea，并没有做任何修改，但是前面的各种阻碍</p><p>比较难受。</p><h1 id="0x2"><a href="#0x2" class="headerlink" title="0x2"></a>0x2</h1><p>开始是最大的一个坑点，长度限制只有一个，就是不能等于16，需要修改一下跳转</p><blockquote><p>但是等到后面调试的时候，才知道知道这里需要进行修改</p></blockquote><p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211019002435203.png" alt="image-20211019002435203"></p><p>接下来会随机生成两个数，并只取十进制状态下的最后一位，然后rand2需要比rand1的值小，才能继续运行程序</p><p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211019002812168.png" alt="image-20211019002812168"></p><p>满足条件后，会经过一个函数，动调可以发现返回的值就是对应次方后的最后一位值，后面进行对比，可以修改跳转通过这里，或者将值获取出来</p><blockquote><p>值:rand1=4,rand2=2</p></blockquote><p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211019002854731.png" alt="image-20211019002854731"></p><p>接下来会跳转到Sleep，一直暂停，这里需要将它nop掉</p><p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211019003400599.png" alt="image-20211019003400599"></p><blockquote><p>这里是nop后</p></blockquote><pre class="line-numbers language-python"><code class="language-python">addr<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0x7FF6DF3D30F6</span><span class="token punctuation">,</span><span class="token number">0x7FF6DF3D3101</span><span class="token punctuation">]</span><span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>addr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>addr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    ida_bytes<span class="token punctuation">.</span>patch_byte<span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">0x90</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>然后通过查看内存的方式，获取xtea的key的四个值</p><pre class="line-numbers language-python"><code class="language-python"><span class="token number">0x67932</span><span class="token punctuation">,</span><span class="token number">0x4F765</span><span class="token punctuation">,</span><span class="token number">0x7FAFF</span><span class="token punctuation">,</span><span class="token number">0x67932</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后搓脚本</p><pre class="line-numbers language-C"><code class="language-C">#include<stdio.h>int xtea(unsigned int x,unsigned int y,unsigned int key[],int round){    int i;    unsigned int v0=x,v1=y;    int delta=0x9E3779B9;    int sum=delta*round;    for(i=0;i<round;i++)    {        v1-=(((v0<<4)^(v0>>5))+v0)^(sum+key[(sum>>11)&3]);        sum-=delta;        v0-=(((v1<<4)^(v1>>5))+v1)^(sum+key[sum&3]);    }    x=v0;y=v1;    printf("%c%c",x,y);}int main(){    unsigned int arr[]={0x0D118C7B2,0x7FC3F3A8,0x4A19F2DA,0x472469E1,0x7C682864,0x50C0E3D1,0x0C595670B,     0x2EE07578,0x0D040A3F0,0x0C5590286,0x0D82B07A8,0x0D5978C2C,0x4E2BC556,0x79E2E90,     0x0C7A353B5,0x493995B};    unsigned int key[]={0x67932,0x4F765,0x7FAFF,0x67932};    for(int i=0;i<16;i+=2)    {        xtea(arr[i],arr[i+1],key,32);        key[0]+=789;key[3]+=135;    } } //answer:dDc75e1fE98cBCe8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>带入程序得最终flag</p><blockquote><p>需要修改长度判断</p></blockquote><pre class="line-numbers language-c"><code class="language-c">flag<span class="token punctuation">{</span>42dDc75e1fE98cBCe842<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Re复现清单 </category>
+          
+          <category> 加密算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> re复现清单 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第五空间_strangelanguage</title>
       <link href="/2021/09/27/%E7%AC%AC%E4%BA%94%E7%A9%BA%E9%97%B4_strangelanguage/"/>
       <url>/2021/09/27/%E7%AC%AC%E4%BA%94%E7%A9%BA%E9%97%B4_strangelanguage/</url>

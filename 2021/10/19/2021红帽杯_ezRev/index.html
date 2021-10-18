@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="分类: re, Myu_">
+    <meta name="keywords" content="2021红帽杯_ezRev, Myu_">
     <meta name="description" content="懒虫一枚">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: re | Myu_</title>
+    <title>2021红帽杯_ezRev | Myu_</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -242,251 +242,565 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Myu_
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "林深时见鹿 海蓝时见鲸 梦醒时见你",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 125,
-                        loop: true,
-                        backSpeed: 60,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('听说你想把密码逆向了(滑稽')).toString(CryptoJS.enc.Hex)) {
+                alert('也许可以物理逆向，联系作者获取密码(认真.jpg');
+                location.href = '/';
+            }
+        }
+    })();
 </script>
 
 
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">2021红帽杯_ezRev</h1>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<main class="content">
+
+
+
+<main class="post-container content">
 
     
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
 
-<div id="category-cloud" class="container chip-container">
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/">
+                                <span class="chip bg-color">re复现清单</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/" class="post-category">
+                                Re复现清单
+                            </a>
+                        
+                            <a href="/categories/Re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" class="post-category">
+                                加密算法
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-10-19
+                </div>
                 
+
                 
-                <a href="/categories/re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/" title="re复现清单: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">re复现清单
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-10-19
+                </div>
                 
+
                 
-                <a href="/categories/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">博客
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    349
+                </div>
                 
+
                 
-                <a href="/categories/Re/" title="Re: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">Re
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
                 
-                
-                <a href="/categories/re/" title="re: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #E8F8F5;">re
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Re/Brainfuck/" title="Brainfuck: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">Brainfuck
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Re/Brainfuck/PyInstaller/" title="PyInstaller: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">PyInstaller
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/" title="Re复现清单: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #82E0AA;">Re复现清单
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" title="加密算法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D7BDE2;">加密算法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+
                 
             </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="0x1"><a href="#0x1" class="headerlink" title="0x1"></a>0x1</h1><p>其实就是一个简单的xtea，并没有做任何修改，但是前面的各种阻碍</p>
+<p>比较难受。</p>
+<h1 id="0x2"><a href="#0x2" class="headerlink" title="0x2"></a>0x2</h1><p>开始是最大的一个坑点，长度限制只有一个，就是不能等于16，需要修改一下跳转</p>
+<blockquote>
+<p>但是等到后面调试的时候，才知道知道这里需要进行修改</p>
+</blockquote>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211019002435203.png" alt="image-20211019002435203"></p>
+<p>接下来会随机生成两个数，并只取十进制状态下的最后一位，然后rand2需要比rand1的值小，才能继续运行程序</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211019002812168.png" alt="image-20211019002812168"></p>
+<p>满足条件后，会经过一个函数，动调可以发现返回的值就是对应次方后的最后一位值，后面进行对比，可以修改跳转通过这里，或者将值获取出来</p>
+<blockquote>
+<p>值:rand1=4,rand2=2</p>
+</blockquote>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211019002854731.png" alt="image-20211019002854731"></p>
+<p>接下来会跳转到Sleep，一直暂停，这里需要将它nop掉</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211019003400599.png" alt="image-20211019003400599"></p>
+<blockquote>
+<p>这里是nop后</p>
+</blockquote>
+<pre class="line-numbers language-python"><code class="language-python">addr<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0x7FF6DF3D30F6</span><span class="token punctuation">,</span><span class="token number">0x7FF6DF3D3101</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>addr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>addr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ida_bytes<span class="token punctuation">.</span>patch_byte<span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">0x90</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>然后通过查看内存的方式，获取xtea的key的四个值</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token number">0x67932</span><span class="token punctuation">,</span><span class="token number">0x4F765</span><span class="token punctuation">,</span><span class="token number">0x7FAFF</span><span class="token punctuation">,</span><span class="token number">0x67932</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后搓脚本</p>
+<pre class="line-numbers language-C"><code class="language-C">#include<stdio.h>
+int xtea(unsigned int x,unsigned int y,unsigned int key[],int round)
+{
+    int i;
+    unsigned int v0=x,v1=y;
+    int delta=0x9E3779B9;
+    int sum=delta*round;
+    for(i=0;i<round;i++)
+    {
+        v1-=(((v0<<4)^(v0>>5))+v0)^(sum+key[(sum>>11)&3]);
+        sum-=delta;
+        v0-=(((v1<<4)^(v1>>5))+v1)^(sum+key[sum&3]);
+    }
+    x=v0;y=v1;
+    printf("%c%c",x,y);
+}
+int main()
+{
+    unsigned int arr[]={0x0D118C7B2,0x7FC3F3A8,0x4A19F2DA,0x472469E1,0x7C682864,0x50C0E3D1,0x0C595670B,
+     0x2EE07578,0x0D040A3F0,0x0C5590286,0x0D82B07A8,0x0D5978C2C,0x4E2BC556,0x79E2E90,
+     0x0C7A353B5,0x493995B};
+    unsigned int key[]={0x67932,0x4F765,0x7FAFF,0x67932};
+    for(int i=0;i<16;i+=2)
+    {
+        xtea(arr[i],arr[i+1],key,32);
+        key[0]+=789;key[3]+=135;
+    }
+ } 
+//answer:dDc75e1fE98cBCe8
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>带入程序得最终flag</p>
+<blockquote>
+<p>需要修改长度判断</p>
+</blockquote>
+<pre class="line-numbers language-c"><code class="language-c">flag<span class="token punctuation">{</span>42dDc75e1fE98cBCe842<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/">
+                                    <span class="chip bg-color">re复现清单</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/10/19/2021%E7%BA%A2%E5%B8%BD%E6%9D%AF_ezRev/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2021红帽杯_ezRev">
+                        
+                        <span class="card-title">2021红帽杯_ezRev</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            2021红帽杯_ezRev
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/" class="post-category">
+                                    Re复现清单
+                                </a>
+                            
+                            <a href="/categories/Re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" class="post-category">
+                                    加密算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/">
+                        <span class="chip bg-color">re复现清单</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/09/27/%E7%AC%AC%E4%BA%94%E7%A9%BA%E9%97%B4_strangelanguage/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="第五空间_strangelanguage">
+                        
+                        <span class="card-title">第五空间_strangelanguage</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            brainfuck语言的编译+py编译的exe的逆向
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Re/" class="post-category">
+                                    Re
+                                </a>
+                            
+                            <a href="/categories/Re/Brainfuck/" class="post-category">
+                                    Brainfuck
+                                </a>
+                            
+                            <a href="/categories/Re/Brainfuck/PyInstaller/" class="post-category">
+                                    PyInstaller
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/re/">
+                        <span class="chip bg-color">re</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%AC%E4%BA%94%E7%A9%BA%E9%97%B4/">
+                        <span class="chip bg-color">第五空间</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
 </div>
 
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/09/18/%E7%BE%8A%E5%9F%8E%E6%9D%AF_DeltX/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2021羊城杯_DeltX">
-                            
-                            <span class="card-title">2021羊城杯_DeltX</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2021羊城杯_DeltX
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/re/" class="post-category">
-                                    re
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
-                            <span class="chip bg-color">羊城杯</span>
-                        </a>
-                        
-                        <a href="/tags/re/">
-                            <span class="chip bg-color">re</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/09/17/%E7%BE%8A%E5%9F%8E%E6%9D%AF_EasyVM/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="2021羊城杯_EasyVM">
-                            
-                            <span class="card-title">2021羊城杯_EasyVM</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Smc+VM
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/re/" class="post-category">
-                                    re
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
-                            <span class="chip bg-color">羊城杯</span>
-                        </a>
-                        
-                        <a href="/tags/re/">
-                            <span class="chip bg-color">re</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
 
 
@@ -766,13 +1080,6 @@ $(function () {
                     document.title = OriginTitile
                 }, 3e3))
         })
-    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-    
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
-
-</html>
-<!-- <script src="/js/cursor.js"></script> -->
-)
     </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
