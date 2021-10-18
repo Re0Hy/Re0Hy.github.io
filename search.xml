@@ -13,8 +13,6 @@
       
       <categories>
           
-          <category> Re复现清单 </category>
-          
           <category> 加密算法 </category>
           
       </categories>
@@ -22,7 +20,9 @@
       
         <tags>
             
-            <tag> re复现清单 </tag>
+            <tag> Re复现清单 </tag>
+            
+            <tag> 红帽杯 </tag>
             
         </tags>
       
@@ -40,8 +40,6 @@
       
       <categories>
           
-          <category> Re复现清单 </category>
-          
           <category> 加密算法 </category>
           
       </categories>
@@ -49,7 +47,9 @@
       
         <tags>
             
-            <tag> re复现清单 </tag>
+            <tag> Re复现清单 </tag>
+            
+            <tag> 强网杯 </tag>
             
         </tags>
       
@@ -67,20 +67,18 @@
       
       <categories>
           
-          <category> Re </category>
+          <category> 编译语言 </category>
           
-          <category> Brainfuck </category>
-          
-          <category> PyInstaller </category>
+          <category> Python逆向 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> re </tag>
-            
             <tag> 第五空间 </tag>
+            
+            <tag> CTF </tag>
             
         </tags>
       
@@ -98,16 +96,16 @@
       
       <categories>
           
-          <category> re </category>
+          <category> 杂货 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 羊城杯 </tag>
+            <tag> Re复现清单 </tag>
             
-            <tag> re </tag>
+            <tag> 羊城杯 </tag>
             
         </tags>
       
@@ -125,16 +123,16 @@
       
       <categories>
           
-          <category> re </category>
+          <category> 杂货 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 羊城杯 </tag>
+            <tag> Re复现清单 </tag>
             
-            <tag> re </tag>
+            <tag> 羊城杯 </tag>
             
         </tags>
       
@@ -152,7 +150,7 @@
       
       <categories>
           
-          <category> Re </category>
+          <category> 杂货 </category>
           
       </categories>
       
@@ -161,7 +159,7 @@
             
             <tag> 羊城杯 </tag>
             
-            <tag> re </tag>
+            <tag> CTF </tag>
             
         </tags>
       
@@ -179,7 +177,7 @@
       
       <categories>
           
-          <category> re复现清单 </category>
+          <category> 数独 </category>
           
       </categories>
       
@@ -187,6 +185,8 @@
         <tags>
             
             <tag> Re复现清单 </tag>
+            
+            <tag> KCTF </tag>
             
         </tags>
       
@@ -229,7 +229,7 @@
       
       <categories>
           
-          <category> re复现清单 </category>
+          <category> maze </category>
           
       </categories>
       
@@ -237,6 +237,8 @@
         <tags>
             
             <tag> Re复现清单 </tag>
+            
+            <tag> KCTF </tag>
             
         </tags>
       
