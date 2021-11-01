@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="KCTF_北冥神功, Myu_">
+    <meta name="keywords" content="虎符_redemption_code, Myu_">
     <meta name="description" content="懒虫一枚">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>KCTF_北冥神功 | Myu_</title>
+    <title>虎符_redemption_code | Myu_</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -259,12 +259,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">KCTF_北冥神功</h1>
+                    <h1 class="description center-align post-title">虎符_redemption_code</h1>
                 </div>
             </div>
         </div>
@@ -384,8 +384,8 @@
                                 <span class="chip bg-color">Re复现清单</span>
                             </a>
                         
-                            <a href="/tags/KCTF/">
-                                <span class="chip bg-color">KCTF</span>
+                            <a href="/tags/%E8%99%8E%E7%AC%A6CTF/">
+                                <span class="chip bg-color">虎符CTF</span>
                             </a>
                         
                     </div>
@@ -396,8 +396,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/maze/" class="post-category">
-                                maze
+                            <a href="/categories/MIPS%E6%9E%B6%E6%9E%84/" class="post-category">
+                                MIPS架构
                             </a>
                         
                     </div>
@@ -409,28 +409,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-11
+                    2021-11-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-19
+                    2021-11-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    635
+                    459
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -445,171 +445,115 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>一道迷宫题，核心内容:</p>
-<pre class="line-numbers language-C"><code class="language-C">LABEL_11:
-          v7 = (v4 + v5 / 6) % 6;               // v5为下标
-          v8 = v5 + v4;
-          count = v22;                          // 初始为0
-          v20 = v7;
-          v10 = 5 - v8 % 6;                     // 5-(v5+v4)%6
-          for ( i = 0; ; i = 1 )                // 奇偶交替
-          {
-            switch ( v10 )
-            {
-              case 1:
-                ++count;
-                break;
-              case 2:
-                v17 = (I++ & 1) == 0;           // 偶数1,奇数0
-                count += v17;
-                break;
-              case 3:
-                v12 = (I++ & 1) != 0;           // 偶数0,奇数1
-                count -= v12;
-                break;
-              case 4:
-                --count;
-                break;
-              case 5:
-                v19 = (I-- & 1) != 0;
-                count -= v19;
-                break;
-              default:
-                v18 = (I-- & 1) == 0;
-                count += v18;
-                break;
-            }
-            if ( count > 9 )
-              break;
-            if ( I > 8 )
-              break;
-            v13 = &aS_1[10 * I + count];
-            if ( *v13 )
-              break;
-            *v13 = 1;
-            if ( i == 1 )
-            {
-              ++v4;
-              v22 = count;
-              v3 = v25[v4];
-              if ( v3 )
-                goto LABEL_4;
-              goto LABEL_19;
-            }
-            v10 = v20;
-          }
-        }
-        else
-        {
-          while ( v24 != ++v5 )
-          {
-            if ( byte_4B7040[v5] == v3 )
-              goto LABEL_11;
-          }
-        }
-      }
-    }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210911155935245.png" alt="image-20210911155935245"></p>
-<p>确定迷宫样子:10*9,并且会将走过的0转换成1:</p>
-<pre class="line-numbers language-python"><code class="language-python">S <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> 
-<span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> 
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> 
-<span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> 
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> 
-<span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> 
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> 
-<span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">1</span> 
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210911155616914.png" alt="image-20210911155616914"></p>
-<p>要打印<code>Good job!</code>，就需要迷宫中没有0，再看迷宫走法:</p>
-<pre class="line-numbers language-C"><code class="language-C">         for ( i = 0; ; i = 1 )                // 奇偶交替
-          {
-            switch ( v10 )
-            {
-              case 1:
-                ++count;
-                break;
-              case 2:
-                v17 = (I++ & 1) == 0;           // 偶数1,奇数0
-                count += v17;
-                break;
-              case 3:
-                v12 = (I++ & 1) != 0;           // 偶数0,奇数1
-                count -= v12;
-                break;
-              case 4:
-                --count;
-                break;
-              case 5:
-                v19 = (I-- & 1) != 0;
-                count -= v19;
-                break;
-              default:
-                v18 = (I-- & 1) == 0;
-                count += v18;
-                break;
-            }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>很奇妙，刚开始看这里有点蒙，但是结合后面代码，确定个个数字之间代表的含义:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>0</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>奇数</td>
-<td>右→</td>
-<td>下↓</td>
-<td>左下↙</td>
-<td>左←</td>
-<td>左上↖</td>
-<td>上↑</td>
-</tr>
-<tr>
-<td>偶数</td>
-<td>右→</td>
-<td>右下↘</td>
-<td>下↓</td>
-<td>左←</td>
-<td>上↑</td>
-<td>右上↗</td>
-</tr>
-</tbody></table>
-<p>获得走法:</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span>
+                <h2 id="0x1"><a href="#0x1" class="headerlink" title="0x1"></a>0x1</h2><p> MIPS架构，可以用能成功反编译的ida版本去反编译，内容的理解实际上不用动调，个人采取了动调，一是正好配置相关环境，二是尝试一下MIPS架构的动调。</p>
+<blockquote>
+<p>之前配置过，但是运行不起来，只能重装</p>
+</blockquote>
+<h2 id="0x2"><a href="#0x2" class="headerlink" title="0x2"></a>0x2</h2><p>反汇编后，</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211102013115566.png" alt="image-20211102013115566"></p>
+<p>pre中(将函数修改成无返回值后):</p>
+<pre class="line-numbers language-C"><code class="language-C">void __fastcall pre(int a1)
+{
+  int v1; // $v0
+  _BOOL4 v2; // $s0
+  int v3; // $v0
+  char v5[4]; // [sp+20h] [+20h] BYREF
+  char v6[24]; // [sp+24h] [+24h] BYREF
+  char v7[24]; // [sp+3Ch] [+3Ch] BYREF
+
+  if ( std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::length(a1) != 14 )// len==14
+  {
+    v1 = std::operator<<<std::char_traits<char>>(&std::cout, "redemption code format error");
+    std::ostream::operator<<(v1, &std::endl<char,std::char_traits<char>>);
+    exit(-1);
+  }
+  std::allocator<char>::allocator(v5);
+  std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(
+    v6,
+    "Ninja Must Die 3 Is A Cruel Game, So Hard For Me",
+    v5);                                        // 将字符串保存到v6中
+  std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(v7, a1);// 将flag传递给v7
+  v2 = server_check_redemption_code((int)v6, (int)v7) == -1;// 不能返回-1,说明有解
+  std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::~basic_string(v7);
+  std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::~basic_string(v6);
+  std::allocator<char>::~allocator(v5);
+  if ( v2 )
+  {
+    v3 = std::operator<<<std::char_traits<char>>(&std::cout, "game error");
+    std::ostream::operator<<(v3, &std::endl<char,std::char_traits<char>>);
+    exit(-2);
+  }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>server_check_redemption_code内:</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> __fastcall <span class="token function">server_check_redemption_code</span><span class="token punctuation">(</span><span class="token keyword">int</span> cmp<span class="token punctuation">,</span> <span class="token keyword">int</span> flag<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> len2<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// $v0</span>
+  <span class="token keyword">int</span> tmp<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [sp+18h] [+18h]</span>
+  <span class="token keyword">int</span> i<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [sp+1Ch] [+1Ch]</span>
+  <span class="token keyword">int</span> j<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [sp+20h] [+20h]</span>
+  <span class="token keyword">int</span> v7<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [sp+24h] [+24h]</span>
+  <span class="token keyword">int</span> k<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [sp+28h] [+28h]</span>
+  <span class="token keyword">int</span> len1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [sp+34h] [+34h]</span>
+  <span class="token keyword">int</span> flag_len<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [sp+38h] [+38h]</span>
+  <span class="token keyword">void</span> <span class="token operator">*</span>s<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [sp+3Ch] [+3Ch]</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token operator">==</span><span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span><span class="token punctuation">(</span>flag<span class="token punctuation">,</span> <span class="token operator">&amp;</span>unk_401D94<span class="token punctuation">)</span> <span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  len1 <span class="token operator">=</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>__cxx11<span class="token punctuation">:</span><span class="token punctuation">:</span>basic_string<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>char_traits<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>allocator<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">>></span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">length</span><span class="token punctuation">(</span>cmp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  len2 <span class="token operator">=</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>__cxx11<span class="token punctuation">:</span><span class="token punctuation">:</span>basic_string<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>char_traits<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>allocator<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">>></span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">length</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  flag_len <span class="token operator">=</span> len2<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span> len2 <span class="token operator">>=</span> <span class="token number">0x200000</span> <span class="token punctuation">)</span>
+    <span class="token function">_cxa_throw_bad_array_new_length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  s <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span>operator new<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>len2 <span class="token operator">&lt;&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">memset</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> flag_len <span class="token operator">&lt;&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_DWORD <span class="token operator">*</span><span class="token punctuation">)</span>s
+  <span class="token operator">+</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>__cxx11<span class="token punctuation">:</span><span class="token punctuation">:</span>basic_string<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>char_traits<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>allocator<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">>></span><span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>flag<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 开拓空间</span>
+  tmp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> flag_len<span class="token punctuation">;</span> <span class="token operator">++</span>i <span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">256</span><span class="token punctuation">;</span> <span class="token operator">++</span>j <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span> j <span class="token operator">!=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>__cxx11<span class="token punctuation">:</span><span class="token punctuation">:</span>basic_string<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>char_traits<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>allocator<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">>></span><span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>
+                           flag<span class="token punctuation">,</span>
+                           i<span class="token punctuation">)</span> <span class="token punctuation">)</span>                 <span class="token comment" spellcheck="true">// j != flag[i]</span>
+        <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_DWORD <span class="token operator">*</span><span class="token punctuation">)</span>s <span class="token operator">+</span> <span class="token number">256</span> <span class="token operator">*</span> i <span class="token operator">+</span> j<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_DWORD <span class="token operator">*</span><span class="token punctuation">)</span>s <span class="token operator">+</span> <span class="token number">256</span> <span class="token operator">*</span> tmp <span class="token operator">+</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// s[i][j] = s[tmp][j]</span>
+      <span class="token keyword">else</span>
+        <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_DWORD <span class="token operator">*</span><span class="token punctuation">)</span>s <span class="token operator">+</span> <span class="token number">256</span> <span class="token operator">*</span> i <span class="token operator">+</span> j<span class="token punctuation">)</span> <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// s[i][j] = i+1</span>
+    <span class="token punctuation">}</span>
+    tmp <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_DWORD <span class="token operator">*</span><span class="token punctuation">)</span>s
+          <span class="token operator">+</span> <span class="token number">256</span> <span class="token operator">*</span> tmp
+          <span class="token operator">+</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>__cxx11<span class="token punctuation">:</span><span class="token punctuation">:</span>basic_string<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>char_traits<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>allocator<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">>></span><span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>flag<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// tmp = s[tmp][flag[i]]</span>
+  <span class="token punctuation">}</span>
+  v7 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> len1<span class="token punctuation">;</span> <span class="token operator">++</span>k <span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    v7 <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_DWORD <span class="token operator">*</span><span class="token punctuation">)</span>s
+         <span class="token operator">+</span> <span class="token number">256</span> <span class="token operator">*</span> v7
+         <span class="token operator">+</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>__cxx11<span class="token punctuation">:</span><span class="token punctuation">:</span>basic_string<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>char_traits<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span><span class="token punctuation">,</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>allocator<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">>></span><span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>cmp<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// v7 = s[v7][cmp[k]]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span> v7 <span class="token operator">==</span> flag_len <span class="token punctuation">)</span>                       <span class="token comment" spellcheck="true">// 判断s[v7][cmp[k]]位置处的值是否为14</span>
+      <span class="token keyword">return</span> k <span class="token operator">-</span> flag_len <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>                  
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>两个函数都看完后，确定pre函数功能:<strong>判断输入值长度是否为14，输入值其中与指定字符串相同的字符数至少有一个</strong>。</p>
+<p>主函数server_check_redemption_code函数返回值为7，有:</p>
+<pre class="line-numbers language-c"><code class="language-c">k <span class="token operator">-</span> flag_len <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">=</span><span class="token number">7</span>
+<span class="token comment" spellcheck="true">//flag_len=14</span>
+<span class="token operator">==</span><span class="token operator">></span> k <span class="token operator">=</span> <span class="token number">20</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>可以得到如下关系:</p>
+<pre class="line-numbers language-python"><code class="language-python">flag ∈ <span class="token string">"Ninja Must Die 3 Is A Cruel Game, So Hard For Me"</span>
+flag ∈ <span class="token string">"I Love Ninja Must Die 3. Beautiful Art And Motive Operation Is Creative."</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">21</span><span class="token punctuation">]</span>   
+len<span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">14</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>直接推出flag:</p>
+<pre class="line-numbers language-c"><code class="language-c">Ninja Must Die
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>逆推输入的值，很容易发现，两两一对，其中奇数位会影响到偶数位，而奇数位只受自己影响，可以根据这个条件，写解题脚本</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> z3 <span class="token keyword">import</span> <span class="token operator">*</span>
-str_arr<span class="token operator">=</span><span class="token string">"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>
-odd<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span>
-even<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span>
-flag<span class="token operator">=</span><span class="token punctuation">[</span>BitVec<span class="token punctuation">(</span><span class="token string">"%d"</span> <span class="token operator">%</span>i<span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>odd<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-s<span class="token operator">=</span>Solver<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>odd<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    s<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">5</span><span class="token operator">-</span><span class="token punctuation">(</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">6</span><span class="token operator">==</span>odd<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-    s<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">+</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">6</span><span class="token operator">==</span>even<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-    s<span class="token punctuation">.</span>add<span class="token punctuation">(</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">,</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>len<span class="token punctuation">(</span>str_arr<span class="token punctuation">)</span><span class="token punctuation">)</span>
-tmp<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>check<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span>sat<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    m<span class="token operator">=</span>s<span class="token punctuation">.</span>model<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> flag<span class="token punctuation">:</span>
-        tmp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>as_long<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">else</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> tmp<span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>str_arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>获得flag:</p>
-<pre class="line-numbers language-python"><code class="language-python">GJ0V4LA4VKEVQZSVCNGJ00N
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20211102020141720.png" alt="image-20211102020141720"></p>
+<p>套个壳:</p>
+<pre class="line-numbers language-c"><code class="language-c">flag<span class="token punctuation">{</span>Ninja Must Die<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
@@ -629,8 +573,8 @@ tmp<span class="token operator">=</span><span class="token punctuation">[</span>
                                     <span class="chip bg-color">Re复现清单</span>
                                 </a>
                             
-                                <a href="/tags/KCTF/">
-                                    <span class="chip bg-color">KCTF</span>
+                                <a href="/tags/%E8%99%8E%E7%AC%A6CTF/">
+                                    <span class="chip bg-color">虎符CTF</span>
                                 </a>
                             
                         </div>
@@ -673,84 +617,36 @@ tmp<span class="token operator">=</span><span class="token punctuation">[</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/15/Hexo+GitHub_create_blog/">
+                <a href="/2021/11/02/%E8%99%8E%E7%AC%A6_redemption_code/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Hexo+GitHub_create_blog">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="虎符_redemption_code">
                         
-                        <span class="card-title">Hexo+GitHub_create_blog</span>
+                        <span class="card-title">虎符_redemption_code</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一次搭建博客记录
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    博客
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">博客</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/09/11/KCTF_%E5%8C%97%E5%86%A5%E7%A5%9E%E5%8A%9F/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="KCTF_北冥神功">
-                        
-                        <span class="card-title">KCTF_北冥神功</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            KCTF_北冥神功
+                            MIPS架构动调
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/maze/" class="post-category">
-                                    maze
+                            <a href="/categories/MIPS%E6%9E%B6%E6%9E%84/" class="post-category">
+                                    MIPS架构
                                 </a>
                             
                             
@@ -765,8 +661,61 @@ tmp<span class="token operator">=</span><span class="token punctuation">[</span>
                         <span class="chip bg-color">Re复现清单</span>
                     </a>
                     
-                    <a href="/tags/KCTF/">
-                        <span class="chip bg-color">KCTF</span>
+                    <a href="/tags/%E8%99%8E%E7%AC%A6CTF/">
+                        <span class="chip bg-color">虎符CTF</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/20/%E8%99%8E%E7%AC%A6_gocrypt/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="虎符_gocrypt">
+                        
+                        <span class="card-title">虎符_gocrypt</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            隐藏函数+xtea
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" class="post-category">
+                                    加密算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/">
+                        <span class="chip bg-color">Re复现清单</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%99%8E%E7%AC%A6CTF/">
+                        <span class="chip bg-color">虎符CTF</span>
                     </a>
                     
                 </div>
