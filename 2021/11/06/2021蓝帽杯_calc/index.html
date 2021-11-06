@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="2021羊城杯_DeltX, Myu_">
+    <meta name="keywords" content="2021蓝帽杯_calc, Myu_">
     <meta name="description" content="懒虫一枚">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>2021羊城杯_DeltX | Myu_</title>
+    <title>2021蓝帽杯_calc | Myu_</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -264,7 +264,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">2021羊城杯_DeltX</h1>
+                    <h1 class="description center-align post-title">2021蓝帽杯_calc</h1>
                 </div>
             </div>
         </div>
@@ -384,8 +384,8 @@
                                 <span class="chip bg-color">Re复现清单</span>
                             </a>
                         
-                            <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
-                                <span class="chip bg-color">羊城杯</span>
+                            <a href="/tags/%E8%93%9D%E5%B8%BD%E6%9D%AFCTF/">
+                                <span class="chip bg-color">蓝帽杯CTF</span>
                             </a>
                         
                     </div>
@@ -396,8 +396,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9D%82%E8%B4%A7/" class="post-category">
-                                杂货
+                            <a href="/categories/Webassembly/" class="post-category">
+                                Webassembly
                             </a>
                         
                     </div>
@@ -409,28 +409,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-18
+                    2021-11-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-19
+                    2021-11-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    466
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -445,80 +445,124 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>直接打开就能看到伪代码，逐步分析</p>
-<p>开始判断是否加上了flag外壳，并判断了长度</p>
-<pre class="line-numbers language-c"><code class="language-c">  Input <span class="token operator">=</span> 0i64<span class="token punctuation">;</span>
-  v170 <span class="token operator">=</span> 0i64<span class="token punctuation">;</span>
-  v171 <span class="token operator">=</span> 0i64<span class="token punctuation">;</span>
-  <span class="token function">sub_140001020</span><span class="token punctuation">(</span><span class="token string">"Input your flag here:\r\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">,</span> envp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">sub_140001080</span><span class="token punctuation">(</span><span class="token string">"%46s"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span>_BYTE<span class="token punctuation">)</span>Input <span class="token operator">!=</span> <span class="token string">'S'</span>
-    <span class="token operator">||</span> <span class="token operator">*</span><span class="token punctuation">(</span>_WORD <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'na'</span>
-    <span class="token operator">||</span> <span class="token operator">*</span><span class="token punctuation">(</span>_DWORD <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'roFg'</span>
-    <span class="token operator">||</span> <span class="token function">BYTE7</span><span class="token punctuation">(</span>Input<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'{'</span>
-    <span class="token operator">||</span> <span class="token function">BYTE8</span><span class="token punctuation">(</span>v171<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'}'</span> <span class="token punctuation">)</span>                     <span class="token comment" spellcheck="true">// SangFor{******************}</span>
-  <span class="token punctuation">{</span>                                             <span class="token comment" spellcheck="true">// 动调确定len=41</span>
-    <span class="token keyword">goto</span> LABEL_155<span class="token punctuation">;</span>                             <span class="token comment" spellcheck="true">// Error</span>
-  <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>长度判断需要在汇编层面看（最开始动调的时候，没有注意长度问题，输入任意长度的值，在套了正确外壳的情况下，依旧会跳转到LABEL_155），仔细看判断<code>{</code>,与<code>}</code>之间判断的值长度，就可以知道具体输入了多少值</p>
-<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210918214510465.png" alt="image-20210918214510465"></p>
-<p>然后进行了一大堆的值进行</p>
-<pre class="line-numbers language-c"><code class="language-c"> v5 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-  I <span class="token operator">=</span> 0i64<span class="token punctuation">;</span>
-  <span class="token keyword">while</span> <span class="token punctuation">(</span> <span class="token number">1</span> <span class="token punctuation">)</span>                                   <span class="token comment" spellcheck="true">// 能输入的值:[0-9][A-Z]</span>
-  <span class="token punctuation">{</span>
-    v7 <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input <span class="token operator">+</span> I <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> __int8<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_BYTE <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>Input <span class="token operator">+</span> I <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">9u</span> <span class="token punctuation">)</span>
-      <span class="token keyword">break</span><span class="token punctuation">;</span>
-    v8 <span class="token operator">=</span> v5 <span class="token operator">-</span> <span class="token number">0x30</span><span class="token punctuation">;</span>
-LABEL_11<span class="token punctuation">:</span>
-    <span class="token operator">++</span>I<span class="token punctuation">;</span>
-    v5 <span class="token operator">=</span> <span class="token number">16</span> <span class="token operator">*</span> <span class="token punctuation">(</span>v7 <span class="token operator">+</span> v8<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span> I <span class="token operator">>=</span> <span class="token number">4</span> <span class="token punctuation">)</span>                               <span class="token comment" spellcheck="true">// 将四个字符转换成十六进制。比如说输入1234,转换成0x1234</span>
-    <span class="token punctuation">{</span>
-      v9 <span class="token operator">=</span> v5 <span class="token operator">>></span> <span class="token number">4</span><span class="token punctuation">;</span>
-      v10 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-      <span class="token keyword">goto</span> LABEL_14<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> __int8<span class="token punctuation">)</span><span class="token punctuation">(</span>v7 <span class="token operator">-</span> <span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">5u</span> <span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
-    v8 <span class="token operator">=</span> v5 <span class="token operator">-</span> <span class="token string">'7'</span><span class="token punctuation">;</span>
-    <span class="token keyword">goto</span> LABEL_11<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="0x1"><a href="#0x1" class="headerlink" title="0x1"></a>0x1</h2><p>第一次接触到wasm，又是被装环境ex到的一天，跟着官方README.md安装都给我报错了，做实离谱，自己添加了一些参数才下载完；之后就开始去学习wasm逆向知识。学到了一些有关Chrome调试的操作。</p>
 <blockquote>
-<p>吐槽一下，明明可以写函数或者循环实现这个操作，但是它就是要一个一个来写….后面判断也是….</p>
+<p>正好极客大挑战出了一个xorwasm，真的舒坦，直接平稳过渡。</p>
 </blockquote>
-<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210918215816924.png" alt="image-20210918215816924"></p>
-<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210918215840421.png" alt="image-20210918215840421"></p>
-<p>然后两两数字为一组，进行运算，并将运算后的值和对应值比较，类似于解二元一次方程。</p>
+<h2 id="0x2"><a href="#0x2" class="headerlink" title="0x2"></a>0x2</h2><p>打开zip，得到三个文件，一个html，一个js，一个wasm，标准的wasm三件套。</p>
 <blockquote>
-<p>这里我是直接动调看输出值和两个输入值有什么关联，多次尝试得出关系，并没有仔细看内部的位运算，理论上可以直接模拟代码获取两个输入值</p>
+<p>个人处理方式</p>
+<ol>
+<li>先获得能被ida反编译且可读性较高的文件，通过ida分析大致操作，</li>
+<li>如果简单就直接推出flag，反之通过Chrome调试去分析，通过设置断点，多次调试确定判断位置，动调分析。</li>
+</ol>
 </blockquote>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true">#两者关系</span>
-flag0<span class="token operator">*</span>flag1<span class="token operator">=</span>num1
-flag0<span class="token operator">-</span>flag1<span class="token operator">=</span>num2
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>搓脚本：</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">Save</span><span class="token punctuation">(</span>mul<span class="token punctuation">,</span>sub<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> a <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0xffff</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        b<span class="token operator">=</span><span class="token punctuation">(</span>a<span class="token operator">-</span><span class="token punctuation">(</span>sub<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token number">0xffff</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token operator">*</span>b<span class="token operator">==</span>mul<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%X%X"</span><span class="token operator">%</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
-<span class="token keyword">if</span> __name__<span class="token operator">==</span><span class="token string">"__main__"</span><span class="token punctuation">:</span>
-    mul<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0x249E15C5</span><span class="token punctuation">,</span><span class="token number">0x34C7EAE2</span><span class="token punctuation">,</span><span class="token number">0x637973BA</span><span class="token punctuation">,</span><span class="token number">0xE5FD104</span><span class="token punctuation">]</span>
-    sub<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0xFFFF59BC</span><span class="token punctuation">,</span><span class="token number">0x216B</span><span class="token punctuation">,</span><span class="token number">0x819D</span><span class="token punctuation">,</span><span class="token number">0x9393</span><span class="token punctuation">]</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"SangFor{"</span><span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>mul<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        Save<span class="token punctuation">(</span>mul<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>sub<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"}"</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>flag:</p>
-<pre class="line-numbers language-python"><code class="language-python">SangFor<span class="token punctuation">{</span><span class="token number">2C7BD2BF862564BAED0B6B6EA94F15BC</span><span class="token punctuation">}</span>
+<p>wasm2c下载后，通过wasm2c将wasm转换成.c文件和.h文件（进入到calc目录</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>wasm2c目录<span class="token punctuation">]</span> <span class="token punctuation">[</span>文件名.wasm<span class="token punctuation">]</span> -o <span class="token punctuation">[</span>转换后的文件名.c<span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20210918220729796.png" alt="image-20210918220729796"></p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211105234430714.png" alt="image-20211105234430714"></p>
+<p>虽然获得的.c文件已经可以分析了，但是分析起来还是比较难受，可以进一步优化一下，将转换出来的两个文件和wasm-rt.h，wasm-rt-impl.c，wasm-rt-impl.h放在一起</p>
+<blockquote>
+<p>后面三个文件在下载的工具wabt/wasm2c文件夹中</p>
+</blockquote>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106001815486.png" alt="image-20211106001815486"></p>
+<p>进入到文件夹，通过gcc编译将.c文件进一步转换为.o文件，提高反汇编后的可读性。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">gcc -c wasm.c -o calc.o
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106002352011.png" alt="image-20211106002352011"></p>
+<p>这样就会获得一个.o文件，这时候拖入ida进行反编译。</p>
+<p>在init_memory发现这一串数据，肯定是有用的，先留着</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106201412298.png" alt="image-20211106201412298"></p>
+<p>找主函数ing…</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token function">__int64</span> <span class="token punctuation">(</span>__fastcall <span class="token operator">*</span><span class="token function">init_exports</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token function">__int64</span> <span class="token punctuation">(</span>__fastcall <span class="token operator">*</span>result<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// rax</span>
+
+  Z_e <span class="token operator">=</span> <span class="token punctuation">(</span>__int64<span class="token punctuation">)</span><span class="token operator">&amp;</span>w2c_e<span class="token punctuation">;</span>
+  Z_fZ_vv <span class="token operator">=</span> <span class="token punctuation">(</span>__int64<span class="token punctuation">)</span>w2c_f<span class="token punctuation">;</span>
+  Z_gZ_iii <span class="token operator">=</span> <span class="token punctuation">(</span>__int64<span class="token punctuation">)</span>w2c_g<span class="token punctuation">;</span>
+  Z_hZ_ii <span class="token operator">=</span> <span class="token punctuation">(</span>__int64<span class="token punctuation">)</span>w2c_h<span class="token punctuation">;</span>
+  Z_i <span class="token operator">=</span> <span class="token punctuation">(</span>__int64<span class="token punctuation">)</span><span class="token operator">&amp;</span>w2c_i<span class="token punctuation">;</span>
+  Z_jZ_iv <span class="token operator">=</span> <span class="token punctuation">(</span>__int64<span class="token punctuation">)</span>w2c_j<span class="token punctuation">;</span>
+  Z_kZ_vi <span class="token operator">=</span> <span class="token punctuation">(</span>__int64<span class="token punctuation">)</span>w2c_k<span class="token punctuation">;</span>
+  result <span class="token operator">=</span> w2c_l<span class="token punctuation">;</span>
+  Z_lZ_ii <span class="token operator">=</span> <span class="token punctuation">(</span>__int64<span class="token punctuation">)</span>w2c_l<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在这里面函数挨个看了一下，最可疑的就是为w2c_h函数</p>
+<pre class="line-numbers language-c"><code class="language-c">_BOOL8 __fastcall <span class="token function">w2c_h</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span> a1<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> v1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// eax</span>
+  <span class="token keyword">int</span> v3<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [rsp+Ch] [rbp-14h]</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> v4<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [rsp+10h] [rbp-10h]</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">++</span>wasm_rt_call_stack_depth <span class="token operator">></span> <span class="token number">0x1F4u</span> <span class="token punctuation">)</span>
+    <span class="token function">wasm_rt_trap</span><span class="token punctuation">(</span><span class="token number">7LL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  w2c_g0 <span class="token operator">-</span><span class="token operator">=</span> <span class="token number">128</span><span class="token punctuation">;</span>
+  v4 <span class="token operator">=</span> w2c_g0<span class="token punctuation">;</span>
+  <span class="token function">w2c_f81</span><span class="token punctuation">(</span>a1<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token punctuation">)</span>w2c_g0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  v3 <span class="token operator">=</span> <span class="token function">w2c_f45</span><span class="token punctuation">(</span>v4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span> v3 <span class="token punctuation">)</span>
+    v1 <span class="token operator">=</span> <span class="token number">0x43D</span><span class="token punctuation">;</span>
+  <span class="token keyword">else</span>
+    v1 <span class="token operator">=</span> <span class="token number">0x435</span><span class="token punctuation">;</span>
+  <span class="token function">w2c_f29</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  w2c_g0 <span class="token operator">=</span> v4 <span class="token operator">+</span> <span class="token number">128</span><span class="token punctuation">;</span>
+  <span class="token operator">--</span>wasm_rt_call_stack_depth<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> v3 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>0x400多的数一般是字符串的偏移量（忘记在哪里看到的知识点了，可能有错</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106161109667.png" alt="image-20211106161109667"></p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token number">0x31EE0</span><span class="token operator">-</span><span class="token number">0x400</span><span class="token operator">+</span><span class="token number">0x43D</span><span class="token operator">=</span><span class="token number">0x31F1D</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>正好对应字符串”Oops….something wrong”</p>
+<p>并且在w2c_f81函数中找到了0x421，按照上面的计算方法对应着”length is not valid”，基本确定上面就是主函数</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106201637526.png" alt="image-20211106201637526"></p>
+<p>主函数内的大致：输值，判断长度，加密，比较，打印正确或者错误。</p>
+<p>之后进行动调</p>
+<p>动调需要使用浏览器调试，先在本地起一个简易的服务器</p>
+<blockquote>
+<p>先进入需要调试文件的文件夹</p>
+</blockquote>
+<pre class="line-numbers language-python"><code class="language-python">python <span class="token operator">-</span>m http<span class="token punctuation">.</span>server <span class="token operator">-</span>b localhost
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106163324069.png" alt="image-20211106163324069"></p>
+<p>然后在浏览器输入网址:</p>
+<pre class="line-numbers language-html"><code class="language-html">http://localhost:8000/calc.html
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>F12，选择Sources，在calc.html判断位置下断</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106164157265.png" alt="image-20211106164157265"></p>
+<p>递步后会跑到calc.wasm中，在calc.wasm设置断点多次调试确定使用位置</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106164621792.png" alt="image-20211106164621792"></p>
+<p>当运行过func29后，屏幕会显示字符串，再根据之前ida查看的内容，基本可以推测出，func81为加密函数，func45为比较函数，func29则为输出函数。其中参数var0用于判断，var1为我们输入的数据。</p>
+<p>可以在调试器右上角的watch中设置这两个参数，用于查看内容</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106165018113.png" alt="image-20211106165018113"></p>
+<p>不知道为什么</p>
+<p>为了更好的理解中间加密过程，从大师傅写的wp那里获得了一个js脚本，用于分析输入值的变化。</p>
+<p>第一次只输入一个值A</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106170453109.png" alt="image-20211106170453109"></p>
+<p>第二次输入两个值AA</p>
+<p><img src="https://myu-data.oss-cn-chengdu.aliyuncs.com/img/image-20211106170724319.png" alt="image-20211106170724319"></p>
+<blockquote>
+<p>这里值需要颠倒一下顺序，我卡在这里了好久….</p>
+</blockquote>
+<p>以此类推，可以得到规律</p>
+<pre class="line-numbers language-c"><code class="language-c">flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">|</span> flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span><span class="token number">7</span> <span class="token operator">|</span> flag<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span><span class="token number">14</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>根据上面ida获取的数据写脚本</p>
+<pre class="line-numbers language-python"><code class="language-python">cmp_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0xF3</span><span class="token punctuation">,</span> <span class="token number">0x39</span><span class="token punctuation">,</span> <span class="token number">0x4C</span><span class="token punctuation">,</span> <span class="token number">0x3A</span><span class="token punctuation">,</span> <span class="token number">0xFE</span><span class="token punctuation">,</span> <span class="token number">0xE6</span><span class="token punctuation">,</span> <span class="token number">0x63</span><span class="token punctuation">,</span> <span class="token number">0xE2</span><span class="token punctuation">,</span> <span class="token number">0xF6</span><span class="token punctuation">,</span> <span class="token number">0x6C</span><span class="token punctuation">,</span> <span class="token number">0x3E</span><span class="token punctuation">,</span> <span class="token number">0x0F</span><span class="token punctuation">,</span> <span class="token number">0x8B</span><span class="token punctuation">,</span> <span class="token number">0x67</span><span class="token punctuation">,</span> <span class="token number">0x77</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+s <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>bin<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span>zfill<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token keyword">for</span> a <span class="token keyword">in</span> cmp_data<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>chr<span class="token punctuation">(</span>int<span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">:</span>i<span class="token operator">+</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>直接引用的大佬的wp脚本，关于python写脚本的知识点++</p>
+</blockquote>
+<p>得到flag：</p>
+<pre class="line-numbers language-python"><code class="language-python">flag<span class="token punctuation">{</span>w3bass3mb1y_cR0ss<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
@@ -537,8 +581,8 @@ flag0<span class="token operator">-</span>flag1<span class="token operator">=</s
                                     <span class="chip bg-color">Re复现清单</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
-                                    <span class="chip bg-color">羊城杯</span>
+                                <a href="/tags/%E8%93%9D%E5%B8%BD%E6%9D%AFCTF/">
+                                    <span class="chip bg-color">蓝帽杯CTF</span>
                                 </a>
                             
                         </div>
@@ -581,54 +625,52 @@ flag0<span class="token operator">-</span>flag1<span class="token operator">=</s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/27/%E7%AC%AC%E4%BA%94%E7%A9%BA%E9%97%B4_strangelanguage/">
+                <a href="/2021/11/06/2021%E8%93%9D%E5%B8%BD%E6%9D%AF_calc/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="第五空间_strangelanguage">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2021蓝帽杯_calc">
                         
-                        <span class="card-title">第五空间_strangelanguage</span>
+                        <span class="card-title">2021蓝帽杯_calc</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            brainfuck语言的编译+py编译的exe的逆向
+                            初识wasm
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E8%AF%91%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    编译语言
-                                </a>
-                            
-                            <a href="/categories/%E7%BC%96%E8%AF%91%E8%AF%AD%E8%A8%80/Python%E9%80%86%E5%90%91/" class="post-category">
-                                    Python逆向
+                            <a href="/categories/Webassembly/" class="post-category">
+                                    Webassembly
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%AC%E4%BA%94%E7%A9%BA%E9%97%B4/">
-                        <span class="chip bg-color">第五空间</span>
+                    <a href="/tags/Re%E5%A4%8D%E7%8E%B0%E6%B8%85%E5%8D%95/">
+                        <span class="chip bg-color">Re复现清单</span>
                     </a>
                     
-                    <a href="/tags/CTF/">
-                        <span class="chip bg-color">CTF</span>
+                    <a href="/tags/%E8%93%9D%E5%B8%BD%E6%9D%AFCTF/">
+                        <span class="chip bg-color">蓝帽杯CTF</span>
                     </a>
                     
                 </div>
@@ -642,31 +684,31 @@ flag0<span class="token operator">-</span>flag1<span class="token operator">=</s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/17/%E7%BE%8A%E5%9F%8E%E6%9D%AF_EasyVM/">
+                <a href="/2021/11/02/%E8%99%8E%E7%AC%A6_redemption_code/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="2021羊城杯_EasyVM">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="虎符_redemption_code">
                         
-                        <span class="card-title">2021羊城杯_EasyVM</span>
+                        <span class="card-title">虎符_redemption_code</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Smc+VM
+                            MIPS架构动调
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9D%82%E8%B4%A7/" class="post-category">
-                                    杂货
+                            <a href="/categories/MIPS%E6%9E%B6%E6%9E%84/" class="post-category">
+                                    MIPS架构
                                 </a>
                             
                             
@@ -680,8 +722,8 @@ flag0<span class="token operator">-</span>flag1<span class="token operator">=</s
                         <span class="chip bg-color">Re复现清单</span>
                     </a>
                     
-                    <a href="/tags/%E7%BE%8A%E5%9F%8E%E6%9D%AF/">
-                        <span class="chip bg-color">羊城杯</span>
+                    <a href="/tags/%E8%99%8E%E7%AC%A6CTF/">
+                        <span class="chip bg-color">虎符CTF</span>
                     </a>
                     
                 </div>
